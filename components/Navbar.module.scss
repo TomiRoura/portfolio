@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+$skyBlue: rgb(128, 128, 128);
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 90px;
+    z-index: 2px;
+
+}
+
+.navbarLinks {
+    display: flex;
+    color: white;
+    font-size: 8px;
+    position: absolute;
+    margin-top: 23px;
+    font-family: 'Roboto Slab', serif;
+    left: 45%;
+
+    a {
+        text-decoration: none;
+        transition: 0.7s ease;
+
+        &:hover,
+        &:active {
+            color: $skyBlue;
+        }
+    }
+}
+
+.aboutLink {
+    margin-right: 60px;
+}
+
+.portfolioLink {
+    margin-left: 60px;
+}
+
+.Logo {
+    width: 40;
+    height: 40px;
+    position: absolute;
+    margin: -7px 35%;
+    transition: 0.7s ease;
+
+
+    &:hover {
+        opacity: 50%;
+    }
+}
+
+.hamburguer {
+    right: 2%;
+    top: 10px;
+    display: block;
+    position: absolute;
+    z-index: 3px;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.hamburguer:hover .spanHamburguer:nth-child(2) {
+    transform: translateX(10px);
+    background-color: lightblue;
+}
+
+.hamburguer .open:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg)
+}
+
+.hamburguer .open:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburguer .open:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg)
+}
+
+
+
+.spanHamburguer {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
