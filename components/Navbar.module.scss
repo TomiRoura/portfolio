@@ -6,7 +6,6 @@ $skyBlue: rgb(128, 128, 128);
     width: 100%;
     height: 90px;
     z-index: 2px;
-
 }
 
 .navbarLinks {
@@ -27,6 +26,10 @@ $skyBlue: rgb(128, 128, 128);
             color: $skyBlue;
         }
     }
+}
+
+.homeLink {
+    display: none;
 }
 
 .aboutLink {
@@ -51,49 +54,45 @@ $skyBlue: rgb(128, 128, 128);
     }
 }
 
-.hamburguer {
-    right: 2%;
-    top: 10px;
-    display: block;
+.hamburger {
+    display: none;
     position: absolute;
-    z-index: 3px;
+    z-index: 4;
     user-select: none;
     appearance: none;
     border: none;
     outline: none;
     background: none;
+    margin: 20px 20px;
+    flex-direction: column;
+    right: 1rem;
     cursor: pointer;
 
+    span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: white;
+        border-radius: 6px;
+        z-index: 1;
+        transform-origin: 0 0;
+        transition: 0.4s;
+
+    }
 }
 
-.hamburguer:hover .spanHamburguer:nth-child(2) {
-    transform: translateX(10px);
-    background-color: lightblue;
-}
+@media (max-width: 600px) {
+    .navbar {
+        height: 65px;
+    }
 
-.hamburguer .open:nth-child(1) {
-    transform: translate(0px, -2px) rotate(45deg)
-}
+    .hamburger {
+        display: flex;
+    }
 
-.hamburguer .open:nth-child(2) {
-    opacity: 0;
-    transform: translateX(15px);
-}
-
-.hamburguer .open:nth-child(3) {
-    transform: translate(-3px, 3px) rotate(-45deg)
-}
-
-
-
-.spanHamburguer {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: white;
-    border-radius: 6px;
-    transform-origin: 0 0;
-    transition: 0.4s;
+    .navbarLinks {
+        display: none;
+    }
 }
