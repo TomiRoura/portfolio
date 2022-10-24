@@ -12,9 +12,9 @@ const Navbar: NextPage = () => {
             <div className={styles.navbar}>
 
                 <div className={styles.navbarLinks}>
-                    <h1><Link href="/"><img src={logo.src} className={styles.Logo} /></Link> </h1>
                     <h1 className={styles.homeLink}><Link href="/">home</Link></h1>
                     <h1><Link href="/about">about</Link></h1>
+                    <h1><Link href="/"><img src={logo.src} className={styles.Logo} /></Link> </h1>
                     <h1><Link href="/portfolio">portfolio</Link></h1>
                 </div>
                 <button onClick={onClickMenu} className={styles.hamburger}>
