@@ -7,6 +7,7 @@ const portfolio: NextPage = () => {
     return (
         <main>
             <Navbar />
+            <h1>Portfolio page</h1>
         </main>
     )
 }
