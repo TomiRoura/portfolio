@@ -7,6 +7,7 @@ const about: NextPage = () => {
     return (
         <main>
             <Navbar />
+            <h1>About me page</h1>
         </main>
     )
 }
