@@ -9,14 +9,19 @@ const Navbar: NextPage = () => {
     const [navbarActive, setNavbarActive] = useState(false);
     const onClickMenu = () => setNavbarActive(!navbarActive);
 
+    const hamburgerClassnames = [styles.hamburger]
     const dropdownClassnames = [styles.dropdown]
     if (navbarActive) {
         dropdownClassnames.push(styles.dropdownActive)
+        hamburgerClassnames.push(styles.hamburgerActive)
     }
+
+
 
     return (
         <main>
             <div className={styles.navbar}>
+                <h1 className={styles.mobileLogo}><Image width={30} height={30} src={logo} /></h1>
                 <div className={styles.navbarLinks}>
                     <Link href="/about">about</Link>
                     <Link href="/">
@@ -24,7 +29,7 @@ const Navbar: NextPage = () => {
                     </Link>
                     <Link href="/portfolio">portfolio</Link>
                 </div>
-                <button onClick={onClickMenu} className={styles.hamburger}>
+                <button onClick={onClickMenu} className={hamburgerClassnames.join(' ')}>
                     <span />
                     <span />
                     <span />
@@ -32,9 +37,12 @@ const Navbar: NextPage = () => {
             </div>
             <div className={dropdownClassnames.join(' ')}>
                 <Link href="/">Home</Link>
+                <hr color="grey" />
                 <Link href="/about">About</Link>
+                <hr color="grey" />
                 <Link href="/portfolio">Portfolio</Link>
             </div>
+
         </main>
     )
 }

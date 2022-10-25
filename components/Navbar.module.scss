@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
 $grey: rgb(128, 128, 128);
+$darkgrey: rgb(32, 32, 32);
 
 .navbar {
     display: flex;
@@ -25,7 +26,7 @@ $grey: rgb(128, 128, 128);
     a {
         margin: 0 30px;
         text-decoration: none;
-        transition: 0.7s ease;
+        transition: 0.3s ease;
 
         &:hover,
         &:active {
@@ -35,7 +36,7 @@ $grey: rgb(128, 128, 128);
 }
 
 .logo {
-    transition: 0.7s ease;
+    transition: 0.3s ease;
     cursor: pointer;
 
     &:hover {
@@ -43,13 +44,13 @@ $grey: rgb(128, 128, 128);
     }
 }
 
-.hamburger {
-    display: none;
-}
-
+.mobileLogo,
+.hamburger,
 .dropdown {
     display: none;
 }
+
+
 
 @media (max-width: 600px) {
     .navbar {
@@ -57,9 +58,6 @@ $grey: rgb(128, 128, 128);
         height: 50px;
     }
 
-    .Logo {
-        display: none;
-    }
 
     .hamburger {
         display: flex;
@@ -78,6 +76,42 @@ $grey: rgb(128, 128, 128);
             transform-origin: 0 0;
             transition: 0.4s;
         }
+
+        &:hover span:nth-child(2) {
+            transform: translateX(10px);
+            background-color: $grey;
+        }
+
+        &Active {
+            span:nth-child(1) {
+                transform: rotate(45deg);
+
+                position: relative;
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 5px;
+                right: 2px;
+                position: relative;
+            }
+        }
+
+    }
+
+
+    .navbarLinks {
+        display: none;
+    }
+
+    .mobileLogo {
+        display: flex;
+        position: absolute;
+        left: 1rem;
     }
 
     .dropdown {
@@ -85,20 +119,35 @@ $grey: rgb(128, 128, 128);
         display: flex;
         flex-direction: column;
         transition: all 500ms;
-        width: 100vh;
-        background-color: black;
+        width: 100%;
+        background-color: $darkgrey;
         position: fixed;
-        top: 50px;
+        align-items: center;
+        font-family: "Roboto Slab", serif;
+
+        hr {
+            opacity: 0;
+            width: 80%;
+        }
 
         a {
             opacity: 0;
-            margin: 2.5px 5px;
+            margin: 15px;
+            font-size: 30px;
+
+            &:hover,
+            &:active {
+                transition: 0.3s ease;
+                color: $grey;
+            }
         }
 
-        &Active {
-            height: 15vh;
 
-            a {
+        &Active {
+            height: 300px;
+
+            a,
+            hr {
                 transition: opacity 500ms 500ms;
                 opacity: 1;
             }
