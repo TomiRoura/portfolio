@@ -1,0 +1,17 @@
+.mainBox {
+    box-shadow: 10px 5px 15px 5px grey;
+    margin-top: -10px;
+}
+
+.profilePic {
+    z-index: 2;
+    margin: 7% 43%;
+    position: absolute;
+}
+
+
+@media (max-width: 600px) {
+    .HoverVideos {
+        display: none;
+    }
+}

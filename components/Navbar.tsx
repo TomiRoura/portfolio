@@ -5,7 +5,9 @@ import logo from '../src/logo.webp';
 import { useState } from 'react';
 import Image from 'next/image';
 
-const Navbar: NextPage = () => {
+
+
+const Navbar: NextPage = (props) => {
     const [navbarActive, setNavbarActive] = useState(false);
     const onClickMenu = () => setNavbarActive(!navbarActive);
 
@@ -16,6 +18,10 @@ const Navbar: NextPage = () => {
         hamburgerClassnames.push(styles.hamburgerActive)
     }
 
+    const styleOfButtons = {
+        activeButtonLink: { fontWeight: "bold", color: "red" },
+        Buttonlink: {}
+    };
 
 
     return (
@@ -23,11 +29,11 @@ const Navbar: NextPage = () => {
             <div className={styles.navbar}>
                 <h1 className={styles.mobileLogo}><Image width={30} height={30} src={logo} /></h1>
                 <div className={styles.navbarLinks}>
-                    <Link href="/about">about</Link>
+                    <Link href="/designer">designer</Link>
                     <Link href="/">
                         <Image width={40} height={40} src={logo} className={styles.logo} />
                     </Link>
-                    <Link href="/portfolio">portfolio</Link>
+                    <Link href="/coder">coder</Link>
                 </div>
                 <button onClick={onClickMenu} className={hamburgerClassnames.join(' ')}>
                     <span />
@@ -38,9 +44,9 @@ const Navbar: NextPage = () => {
             <div className={dropdownClassnames.join(' ')}>
                 <Link href="/">Home</Link>
                 <hr color="grey" />
-                <Link href="/about">About</Link>
+                <Link href="/designer">designer</Link>
                 <hr color="grey" />
-                <Link href="/portfolio">Portfolio</Link>
+                <Link href="/coder">coder</Link>
             </div>
 
         </main>

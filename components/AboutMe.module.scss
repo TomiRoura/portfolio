@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+$grey: rgb(128, 128, 128);
+$darkgrey: rgb(62, 62, 62);
+$semiwhite: rgb(241, 241, 241);
+
+.about {
+    margin-top: 100px;
+    background-color: $semiwhite;
+}
+
+.aboutTitle {
+
+    margin-left: 30px;
+    font-size: 50px;
+    font-size: 5.8vw;
+    //font-family: 'Roboto Slab', serif;
+    color: $darkgrey;
+    //  font-weight: bold;
+}
+
+.aboutText {
+    margin-left: 30px;
+    font-size: 25px;
+    font-size: 1.7vw;
+    width: 40%;
+    margin-top: -60px;
+    //font-family: 'Roboto Slab', serif;
+    color: $grey;
+}
+
+.aboutSecondText {
+    margin-left: 30px;
+    font-size: 15px;
+    font-size: 1vw;
+    width: 50%;
+
+    margin-top: 0px;
+    // font-family: 'Roboto Slab', serif;
+    color: black;
+}
+
+.image {
+    float: right;
+    margin-right: 10%;
+    margin-top: -70px;
+
+}

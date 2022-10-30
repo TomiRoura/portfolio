@@ -3,14 +3,14 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 
-const about: NextPage = () => {
+const coder: NextPage = () => {
     return (
         <main>
             <Navbar />
-            <h1>About me page</h1>
+            <h1>coder page</h1>
         </main>
     )
 }
 
 
-export default about
+export default coder

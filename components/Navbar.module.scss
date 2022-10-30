@@ -6,13 +6,13 @@ $darkgrey: rgb(32, 32, 32);
     display: flex;
     position: fixed;
     top: 0;
-    padding: 10px;
     background-color: rgb(0, 0, 0);
     width: 100%;
     height: 60px;
     justify-content: center;
     align-items: center;
-    transition: all 1000ms;
+    transition: all 500ms;
+    z-index: 100;
 }
 
 .navbarLinks {
@@ -22,14 +22,14 @@ $darkgrey: rgb(32, 32, 32);
     font-family: "Roboto Slab", serif;
     align-items: center;
     z-index: 2;
+    margin-right: 22px;
 
     a {
         margin: 0 30px;
         text-decoration: none;
         transition: 0.3s ease;
 
-        &:hover,
-        &:active {
+        &:hover {
             color: $grey;
         }
     }
@@ -39,8 +39,10 @@ $darkgrey: rgb(32, 32, 32);
     transition: 0.3s ease;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:active {
         opacity: 50%;
+        color: $grey;
     }
 }
 
@@ -124,6 +126,7 @@ $darkgrey: rgb(32, 32, 32);
         position: fixed;
         align-items: center;
         font-family: "Roboto Slab", serif;
+        z-index: 100;
 
         hr {
             opacity: 0;
