@@ -1,3 +1,8 @@
+.main {
+    position: relative;
+    z-index: 2;
+}
+
 .mainBox {
     box-shadow: 10px 5px 15px 5px grey;
     margin-top: -10px;
@@ -9,9 +14,35 @@
     position: absolute;
 }
 
+.videos {
+    display: none;
 
-@media (max-width: 600px) {
+}
+
+.MprofilePic {
+    display: none;
+}
+
+
+@media (max-width: 800px) {
     .HoverVideos {
         display: none;
+    }
+
+    .videos {
+
+        height: 60vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profilePic {
+        display: none;
+    }
+
+    .MprofilePic {
+        display: flex;
+        margin: 38% 33%;
+        position: absolute;
     }
 }

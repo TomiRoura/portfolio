@@ -5,15 +5,16 @@ import AboutMe from '../components/AboutMe';
 import HoverVideos from '../components/HoverVideos';
 
 
+
+
 const Home: NextPage = () => {
   return (
     <main>
-
       <Navbar />
       <HoverVideos />
       <AboutMe />
       <Footer />
-    </main>
+    </main >
 
   )
 }

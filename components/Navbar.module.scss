@@ -13,6 +13,7 @@ $darkgrey: rgb(32, 32, 32);
     align-items: center;
     transition: all 500ms;
     z-index: 100;
+    // opacity: 95%;
 }
 
 .navbarLinks {
@@ -42,7 +43,6 @@ $darkgrey: rgb(32, 32, 32);
     &:hover,
     &:active {
         opacity: 50%;
-        color: $grey;
     }
 }
 
@@ -52,12 +52,11 @@ $darkgrey: rgb(32, 32, 32);
     display: none;
 }
 
-
-
 @media (max-width: 600px) {
     .navbar {
         justify-content: flex-end;
-        height: 50px;
+
+
     }
 
 
@@ -67,6 +66,8 @@ $darkgrey: rgb(32, 32, 32);
         background: none;
         flex-direction: column;
         cursor: pointer;
+        margin-right: 10px;
+
 
         span {
             display: block;
@@ -114,10 +115,12 @@ $darkgrey: rgb(32, 32, 32);
         display: flex;
         position: absolute;
         left: 1rem;
+
     }
 
     .dropdown {
-        height: 0;
+        top: 8.78vh;
+        height: 0px;
         display: flex;
         flex-direction: column;
         transition: all 500ms;
@@ -137,6 +140,7 @@ $darkgrey: rgb(32, 32, 32);
             opacity: 0;
             margin: 15px;
             font-size: 30px;
+            user-select: none;
 
             &:hover,
             &:active {
@@ -147,7 +151,9 @@ $darkgrey: rgb(32, 32, 32);
 
 
         &Active {
+
             height: 300px;
+            width: 100%;
 
             a,
             hr {

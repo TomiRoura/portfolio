@@ -5,44 +5,78 @@ $darkgrey: rgb(62, 62, 62);
 $semiwhite: rgb(241, 241, 241);
 
 .about {
-    margin-top: 100px;
+
+    position: relative;
+    z-index: 1;
     background-color: $semiwhite;
+    user-select: none;
 }
 
 .aboutTitle {
-
-    margin-left: 30px;
-    font-size: 50px;
+    margin: 8% 18% 0%;
     font-size: 5.8vw;
-    //font-family: 'Roboto Slab', serif;
     color: $darkgrey;
-    //  font-weight: bold;
+
+
 }
 
 .aboutText {
     margin-left: 30px;
-    font-size: 25px;
-    font-size: 1.7vw;
+    text-align: center;
+    font-size: 2.2vw;
     width: 40%;
-    margin-top: -60px;
-    //font-family: 'Roboto Slab', serif;
+    margin-left: 7%;
     color: $grey;
 }
 
 .aboutSecondText {
-    margin-left: 30px;
+    text-align: center;
     font-size: 15px;
-    font-size: 1vw;
+    font-size: 1.2vw;
     width: 50%;
-
-    margin-top: 0px;
-    // font-family: 'Roboto Slab', serif;
+    margin: 2% 2% 0%;
     color: black;
 }
 
 .image {
     float: right;
-    margin-right: 10%;
-    margin-top: -70px;
+    max-width: 30%;
+    margin-top: -30%;
+    position: relative;
+}
 
+
+@media (max-width: 800px) {
+
+
+
+    .aboutTitle,
+    .aboutText,
+    .aboutSecondText {
+        text-align: center;
+        margin-top: 0px;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .aboutTitle {
+        margin-top: 60%;
+        font-size: 3em;
+    }
+
+    .aboutText {
+        font-size: 1em;
+    }
+
+    .aboutSecondText {
+        font-size: 0.8em;
+        margin-bottom: 200px;
+
+    }
+
+    .image {
+        float: none;
+        top: 10vw;
+        margin-left: 35%;
+    }
 }

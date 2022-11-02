@@ -3,64 +3,90 @@ import HoverVideoPlayer from 'react-hover-video-player';
 import styles from './/HoverVideos.module.scss';
 import profilePic from '../src/profilePic.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
+const easing = [0, .90, .11, .99]
+
+const fadeInUp = {
+  initial: {
+    y: -1000,
+    opacity: 1,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: .6,
+      ease: easing,
+    }
+  }
+}
 
 const HoverVideos: NextPage = () => {
   return (
-    <main className={styles.HoverVideos}>
-      <div className={styles.profilePic}><Image width={200} height={200} src={profilePic} /></div>
-      <HoverVideoPlayer
-        style={{
-          width: '50%',
-          height: '50%',
-          left: '0rem',
-        }}
-        videoSrc="/designerVideo.webm"
-        pausedOverlay={
-          <img
-            src="/wallpaperComplete.webp"
-            alt=""
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-            }}
-          />
-        }
-        loadingOverlay={
-          <div className="loading-overlay">
-            <div className="loading-spinner" />
-          </div>
-        }
-      />
-      <HoverVideoPlayer
-        style={{
-          width: '50%',
-          height: '50%',
-          right: '0rem',
+    <main className={styles.main}>
+      <motion.div exit={{ opacity: 0 }} initial='initial' animate='animate' variants={fadeInUp} >
+        <div className={styles.profilePic}><Image width={400} height={400} src={profilePic} /></div>
+        <div className={styles.MprofilePic}><Image width={400} height={400} src={profilePic} /></div>
+        <div className={styles.HoverVideos}>
 
-        }}
-        videoSrc="/coderVideo.webm"
-        pausedOverlay={
-          <img
-            src="/wallpaperComplete2.webp"
-            alt=""
+          <HoverVideoPlayer
             style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              position: 'absolute'
+              width: '50%',
+              height: '50%',
+              left: '0rem',
             }}
+            videoSrc="/designerVideo.webm"
+            pausedOverlay={
+              <img
+                src="/wallpaperComplete.webp"
+                alt=""
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+            }
+            loadingOverlay={
+              <div className="loading-overlay">
+                <div className="loading-spinner" />
+              </div>
+            }
           />
-        }
-        loadingOverlay={
-          <div className="loading-overlay">
-            <div className="loading-spinner" />
-          </div>
-        }
-      />
+          <HoverVideoPlayer
+            style={{
+              width: '50%',
+              height: '50%',
+              right: '0rem',
 
-      <div className={styles.mainBox}></div>
+            }}
+            videoSrc="/coderVideo.webm"
+            pausedOverlay={
+              <img
+                src="/wallpaperComplete2.webp"
+                alt=""
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  position: 'absolute'
+                }}
+              />
+            }
+            loadingOverlay={
+              <div className="loading-overlay">
+                <div className="loading-spinner" />
+              </div>
+            }
+          />
+        </div>
+        <div className={styles.videos}>
+          <video src={"/designerVideo.webm"} autoPlay loop />
+          <video src={"/coderVideo.webm"} autoPlay loop />
+        </div>
+        <div className={styles.mainBox}></div>
+      </motion.div>
     </main>
   )
 }

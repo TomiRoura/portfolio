@@ -1,13 +1,23 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import CarrouselAppSlider from '../components/CarrouselAppSlider'
+import CompareSlider from '../components/CompareSlider'
+import CarrouselVidSlider from '../components/CarrouselVidSlider'
+import CarrouselPicSlider from '../components/CarrouselPicSlider'
+
 
 const designer: NextPage = () => {
     return (
         <main>
+
             <Navbar />
-            <h1>designer page</h1>
+            <CarrouselAppSlider />
+            <CompareSlider />
+            <CarrouselVidSlider />
+            <CarrouselPicSlider />
+            <Footer />
+
         </main>
     )
 }

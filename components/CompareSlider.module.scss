@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+$grey: rgb(239, 239, 239);
+
+.compareContainer {
+    position: absolute;
+    height: 25vw;
+    top: 60vw;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    background-color: $grey;
+    box-shadow: 0px 0px 5px 2px rgb(126, 126, 126);
+}
+
+.title {
+    font-size: 1.8vw;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    font-family: 'Source Sans Pro', sans-serif;
+    bottom: 10vw;
+    user-select: none;
+    margin-left: 10%;
+    width: 40%;
+    text-align: center;
+}
+
+.compareSlider {
+    border: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(148, 148, 148);
+    float: right;
+    margin: 4% 4%;
+    width: 30vw;
+}
+
+@media (max-width: 600px) {
+    .compareContainer {
+        display: none;
+    }
+}

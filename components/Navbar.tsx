@@ -4,6 +4,7 @@ import Link from 'next/link';
 import logo from '../src/logo.webp';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 
 
@@ -18,10 +19,10 @@ const Navbar: NextPage = (props) => {
         hamburgerClassnames.push(styles.hamburgerActive)
     }
 
-    const styleOfButtons = {
-        activeButtonLink: { fontWeight: "bold", color: "red" },
-        Buttonlink: {}
-    };
+    const router = useRouter()
+    const HomePage = router.pathname === '/'
+    const DesignPage = router.pathname === '/designer'
+    const CoderPage = router.pathname === './coder'
 
 
     return (
@@ -29,11 +30,11 @@ const Navbar: NextPage = (props) => {
             <div className={styles.navbar}>
                 <h1 className={styles.mobileLogo}><Image width={30} height={30} src={logo} /></h1>
                 <div className={styles.navbarLinks}>
-                    <Link href="/designer">designer</Link>
-                    <Link href="/">
+                    <Link style={{ color: DesignPage ? 'grey' : 'black' }} href="/designer">designer</Link>
+                    <Link style={{ color: HomePage ? 'grey' : 'black' }} href="/">
                         <Image width={40} height={40} src={logo} className={styles.logo} />
                     </Link>
-                    <Link href="/coder">coder</Link>
+                    <Link style={{ color: CoderPage ? 'grey' : 'black' }} href="/coder">coder</Link>
                 </div>
                 <button onClick={onClickMenu} className={hamburgerClassnames.join(' ')}>
                     <span />
