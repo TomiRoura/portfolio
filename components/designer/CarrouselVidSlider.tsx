@@ -4,7 +4,7 @@ import styles from ".//CarrouselVidSlider.module.scss";
 import wallpaperComp from "../../src/wallpaperCarrousel.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import VidToggle from "./toggles/vidToggle";
+import VidToggle, { Slide } from "./toggles/vidToggle";
 
 function RightArrow(props: any) {
   const { className, style, onClick } = props;
@@ -33,6 +33,20 @@ function LeftArrow(props: any) {
 }
 
 function CarrouselVidSlider() {
+  const [picOpen, setPicOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<Slide>(null);
+  const [swipedRecently, setSwipedRecently] = useState(false);
+
+  const slides: Array<Slide> = [
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/designerVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/designerVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/designerVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+  ];
+
   const settings = {
     dots: false,
     infinite: true,
@@ -52,12 +66,6 @@ function CarrouselVidSlider() {
     prevArrow: <RightArrow />,
   };
 
-  const close = () => setPicOpen(false);
-  const open = () => setPicOpen(true);
-  const [picOpen, setPicOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
-  const [swipedRecently, setSwipedRecently] = useState(false);
-
   useEffect(() => {
     if (!swipedRecently) return;
     const timeout = setTimeout(() => {
@@ -67,15 +75,14 @@ function CarrouselVidSlider() {
     return () => clearTimeout(timeout);
   }, [swipedRecently]);
 
-  const onClickSlide = (slide: Slide) => {
-    if (swipedRecently) return;
-    setSelectedImage(slide.image);
-    if (picOpen) {
-      close();
-    } else {
-      open();
-    }
-  };
+  const onClickSlide = useCallback(
+    (slide: Slide) => {
+      if (swipedRecently) return;
+      setSelectedImage(slide);
+      setPicOpen(!picOpen);
+    },
+    [swipedRecently, setPicOpen, setSelectedImage, picOpen]
+  );
 
   type Slide = {
     image: string;
@@ -95,8 +102,8 @@ function CarrouselVidSlider() {
       {picOpen && (
         <VidToggle
           isOpen={picOpen}
-          handleClose={close}
-          currentImage={selectedImage}
+          handleClose={() => setPicOpen(false)}
+          currentSlide={selectedImage}
         />
       )}
       <div className={styles.main}>

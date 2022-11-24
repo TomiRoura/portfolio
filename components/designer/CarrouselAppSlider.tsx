@@ -84,12 +84,13 @@ export default class CarrouselSlider extends Component {
           <div className={styles.carrouselSlider}>
             <motion.div variants={fadeInUpTitle}>
               <h2 className={styles.designerAndFilmaker}>
-                {" "}
-                Designer and Filmaker{" "}
+                Designer and Filmaker
               </h2>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <h2 className={styles.AppsThatIUse}> apps that I use </h2>
+              <h2 className={styles.AppsThatIUse}>
+                apps that I use
+              </h2>
               <Slider {...settings}>
                 {images.map((images) => (
                   <div className={styles.image}>
