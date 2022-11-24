@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import VidToggle from "./toggles/vidToggle";
 
-function RightArrow(props) {
+function RightArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -19,7 +19,7 @@ function RightArrow(props) {
   );
 }
 
-function LeftArrow(props) {
+function LeftArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -32,22 +32,7 @@ function LeftArrow(props) {
   );
 }
 
-type Slide = {
-  image: string;
-  video: string;
-};
-
 function CarrouselVidSlider() {
-  const slides: Array<Slide> = [
-    { image: wallpaperComp, video: "1" },
-    { image: wallpaperComp, video: "2" },
-    { image: wallpaperComp, video: "3" },
-    { image: wallpaperComp, video: "4" },
-    { image: wallpaperComp, video: "5" },
-    { image: wallpaperComp, video: "6" },
-    { image: wallpaperComp, video: "7" },
-  ];
-
   const settings = {
     dots: false,
     infinite: true,
@@ -92,6 +77,19 @@ function CarrouselVidSlider() {
     }
   };
 
+  type Slide = {
+    image: string;
+    video: string;
+  };
+
+  const slides: Array<Slide> = [
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+  ];
+
   return (
     <main>
       {picOpen && (
@@ -107,11 +105,6 @@ function CarrouselVidSlider() {
           <Slider
             {...settings}
             onSwipe={() => setSwipedRecently(true)}
-            dots={false}
-            infinite={true}
-            speed={500}
-            slidesToShow={3}
-            slidesToScroll={3}
             nextArrow={<LeftArrow />}
             prevArrow={<RightArrow />}
           >

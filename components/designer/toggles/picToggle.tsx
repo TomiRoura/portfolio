@@ -31,13 +31,13 @@ const vidToggle = ({ handleClose, currentImage }: Props) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className={styles.vidToggle}
+        className={styles.picToggle}
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <Image src={currentImage} className={styles.vidToggle} />
+        <Image src={currentImage} className={styles.picToggle} />
         <button onClick={handleClose}>cross</button>
       </motion.div>
     </Backdrop>

@@ -24,9 +24,10 @@ type Props = {
   isOpen: boolean;
   handleClose: () => void;
   currentImage: string;
+  currentVideo: string;
 };
 
-const vidToggle = ({ handleClose, currentImage }: Props) => {
+const vidToggle = ({ handleClose, currentImage, currentVideo }: Props) => {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -38,6 +39,7 @@ const vidToggle = ({ handleClose, currentImage }: Props) => {
         exit="exit"
       >
         <Image src={currentImage} className={styles.vidToggle} />
+        <video src={currentVideo} />
         <button onClick={handleClose}>cross</button>
       </motion.div>
     </Backdrop>
