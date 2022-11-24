@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+$grey: rgb(215, 215, 215);
+
+.main {
+  height: 30vw;
+  background-color: $grey;
+  align-items: center;
+  box-shadow: 0px 0px 5px 2px rgb(148, 148, 148);
+  position: relative;
+  top: -10rem;
+}
+
+.title {
+  text-align: center;
+  padding-top: 40px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2vw;
+}
+
+.VidSlider {
+  width: 90%;
+  position: absolute;
+  right: 5%;
+  z-index: 2;
+  margin-top: 1vw;
+}
+
+.video {
+  padding-left: 5px;
+  border-radius: 10px;
+}
+
+.VidSliderMobile {
+  display: none;
+}
+
+.arrow {
+  width: 100px;
+  position: relative;
+  margin-top: -20px;
+  background-color: $grey;
+}
+
+@media (max-width: 600px) {
+  .main {
+    top: -5vw;
+    height: 65vw;
+  }
+
+  .VidSlider {
+    display: none;
+  }
+
+  .VidSliderMobile {
+    display: block;
+    width: 90%;
+    position: absolute;
+    top: 12vw;
+    z-index: 2;
+    right: 5vw;
+  }
+
+  .title {
+    font-size: 3vw;
+    padding-top: 15px;
+  }
+}

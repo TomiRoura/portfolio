@@ -3,163 +3,155 @@ $grey: rgb(128, 128, 128);
 $darkgrey: rgb(32, 32, 32);
 
 .navbar {
-    display: flex;
-    position: fixed;
-    top: 0;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    transition: all 500ms;
-    z-index: 100;
-    // opacity: 95%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms;
+  z-index: 100;
+  // opacity: 95%;
 }
 
 .navbarLinks {
-    display: flex;
-    color: white;
-    font-size: 16px;
-    font-family: "Roboto Slab", serif;
-    align-items: center;
-    z-index: 2;
-    margin-right: 22px;
+  display: flex;
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  align-items: center;
+  z-index: 2;
+  margin-right: 22px;
+  font-weight: 200;
 
-    a {
-        margin: 0 30px;
-        text-decoration: none;
-        transition: 0.3s ease;
+  a {
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
 
-        &:hover {
-            color: $grey;
-        }
+    &:hover {
+      color: $grey;
     }
+  }
 }
 
 .logo {
-    transition: 0.3s ease;
-    cursor: pointer;
+  transition: 0.3s ease;
+  cursor: pointer;
 
-    &:hover,
-    &:active {
-        opacity: 50%;
-    }
+  &:hover,
+  &:active {
+    opacity: 50%;
+  }
 }
 
 .mobileLogo,
 .hamburger,
 .dropdown {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        justify-content: flex-end;
+  .navbar {
+    justify-content: flex-end;
+  }
 
+  .hamburger {
+    display: flex;
+    border: none;
+    background: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 10px;
 
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      background-color: white;
+      border-radius: 6px;
+      transform-origin: 0 0;
+      transition: 0.4s;
     }
 
-
-    .hamburger {
-        display: flex;
-        border: none;
-        background: none;
-        flex-direction: column;
-        cursor: pointer;
-        margin-right: 10px;
-
-
-        span {
-            display: block;
-            width: 33px;
-            height: 4px;
-            margin-bottom: 5px;
-            background-color: white;
-            border-radius: 6px;
-            transform-origin: 0 0;
-            transition: 0.4s;
-        }
-
-        &:hover span:nth-child(2) {
-            transform: translateX(10px);
-            background-color: $grey;
-        }
-
-        &Active {
-            span:nth-child(1) {
-                transform: rotate(45deg);
-
-                position: relative;
-            }
-
-            span:nth-child(2) {
-                opacity: 0;
-            }
-
-            span:nth-child(3) {
-                transform: rotate(-45deg);
-                top: 5px;
-                right: 2px;
-                position: relative;
-            }
-        }
-
+    &:hover span:nth-child(2) {
+      transform: translateX(10px);
+      background-color: $grey;
     }
 
+    &Active {
+      span:nth-child(1) {
+        transform: rotate(45deg);
 
-    .navbarLinks {
-        display: none;
+        position: relative;
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 5px;
+        right: 2px;
+        position: relative;
+      }
+    }
+  }
+
+  .navbarLinks {
+    display: none;
+  }
+
+  .mobileLogo {
+    display: flex;
+    position: absolute;
+    left: 1rem;
+  }
+
+  .dropdown {
+    top: 7.63vh;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms;
+    width: 100%;
+    background-color: $darkgrey;
+    position: fixed;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    z-index: 100;
+    font-weight: 200;
+
+    hr {
+      opacity: 0;
+      width: 80%;
     }
 
-    .mobileLogo {
-        display: flex;
-        position: absolute;
-        left: 1rem;
+    a {
+      opacity: 0;
+      margin: 15px;
+      font-size: 30px;
+      user-select: none;
 
+      &:hover,
+      &:active {
+        transition: 0.3s ease;
+        color: $grey;
+      }
     }
 
-    .dropdown {
-        top: 8.78vh;
-        height: 0px;
-        display: flex;
-        flex-direction: column;
-        transition: all 500ms;
-        width: 100%;
-        background-color: $darkgrey;
-        position: fixed;
-        align-items: center;
-        font-family: "Roboto Slab", serif;
-        z-index: 100;
+    &Active {
+      height: 300px;
+      width: 100%;
 
-        hr {
-            opacity: 0;
-            width: 80%;
-        }
-
-        a {
-            opacity: 0;
-            margin: 15px;
-            font-size: 30px;
-            user-select: none;
-
-            &:hover,
-            &:active {
-                transition: 0.3s ease;
-                color: $grey;
-            }
-        }
-
-
-        &Active {
-
-            height: 300px;
-            width: 100%;
-
-            a,
-            hr {
-                transition: opacity 500ms 500ms;
-                opacity: 1;
-            }
-        }
+      a,
+      hr {
+        transition: opacity 500ms 500ms;
+        opacity: 1;
+      }
     }
+  }
 }

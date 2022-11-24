@@ -1,19 +1,18 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import Footer from '../components/Footer'
-import HoverVideos from '../components/HoverVideos'
-import Navbar from '../components/Navbar'
+import type { NextPage } from "next";
+import CodeProjects from "../components/coder/CodeProjects";
+import CoderCarrousel from "../components/coder/CoderCarrousel";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const coder: NextPage = () => {
-    return (
-        <main>
-            <Navbar />
-            <Footer />
-            <h1>coder page</h1>
-        </main>
-    )
-}
+  return (
+    <main>
+      <Navbar />
+      <CoderCarrousel />
+      <CodeProjects />
+      <Footer />
+    </main>
+  );
+};
 
-
-export default coder
+export default coder;

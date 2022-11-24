@@ -15,7 +15,6 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "framer-motion": "^7.6.2",
-    "hamburger-react": "^2.5.0",
     "next": "^12.3.1",
     "next-videos": "1.5.0",
     "react": "^18.2.0",
@@ -26,5 +25,8 @@
     "sass": "^1.55.0",
     "slick-carousel": "^1.8.1",
     "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10"
   }
 }

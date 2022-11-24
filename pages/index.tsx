@@ -1,11 +1,8 @@
-import type { NextPage } from 'next'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer';
-import AboutMe from '../components/AboutMe';
-import HoverVideos from '../components/HoverVideos';
-
-
-
+import type { NextPage } from "next";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import AboutMe from "../components/home/AboutMe";
+import HoverVideos from "../components/home/HoverVideos";
 
 const Home: NextPage = () => {
   return (
@@ -14,8 +11,7 @@ const Home: NextPage = () => {
       <HoverVideos />
       <AboutMe />
       <Footer />
-    </main >
-
-  )
-}
-export default Home
+    </main>
+  );
+};
+export default Home;
