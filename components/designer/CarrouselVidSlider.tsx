@@ -4,7 +4,7 @@ import styles from ".//CarrouselVidSlider.module.scss";
 import wallpaperComp from "../../src/wallpaperCarrousel.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import VidToggle from "./toggles/vidToggle";
+import VidToggle, { Slide } from "./toggles/vidToggle";
 
 function RightArrow(props) {
   const { className, style, onClick } = props;
@@ -32,20 +32,19 @@ function LeftArrow(props) {
   );
 }
 
-type Slide = {
-  image: string;
-  video: string;
-};
-
 function CarrouselVidSlider() {
+  const [picOpen, setPicOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<Slide>(null);
+  const [swipedRecently, setSwipedRecently] = useState(false);
+
   const slides: Array<Slide> = [
-    { image: wallpaperComp, video: "1" },
-    { image: wallpaperComp, video: "2" },
-    { image: wallpaperComp, video: "3" },
-    { image: wallpaperComp, video: "4" },
-    { image: wallpaperComp, video: "5" },
-    { image: wallpaperComp, video: "6" },
-    { image: wallpaperComp, video: "7" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/designerVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/designerVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
+    { image: wallpaperComp, video: "/designerVideo.webm" },
+    { image: wallpaperComp, video: "/coderVideo.webm" },
   ];
 
   const settings = {
@@ -67,12 +66,6 @@ function CarrouselVidSlider() {
     prevArrow: <RightArrow />,
   };
 
-  const close = () => setPicOpen(false);
-  const open = () => setPicOpen(true);
-  const [picOpen, setPicOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
-  const [swipedRecently, setSwipedRecently] = useState(false);
-
   useEffect(() => {
     if (!swipedRecently) return;
     const timeout = setTimeout(() => {
@@ -82,23 +75,19 @@ function CarrouselVidSlider() {
     return () => clearTimeout(timeout);
   }, [swipedRecently]);
 
-  const onClickSlide = (slide: Slide) => {
+  const onClickSlide = useCallback((slide: Slide) => {
     if (swipedRecently) return;
-    setSelectedImage(slide.image);
-    if (picOpen) {
-      close();
-    } else {
-      open();
-    }
-  };
+    setSelectedImage(slide);
+    setPicOpen(!picOpen)
+  }, [swipedRecently, setPicOpen, setSelectedImage, picOpen]);
 
   return (
     <main>
       {picOpen && (
         <VidToggle
           isOpen={picOpen}
-          handleClose={close}
-          currentImage={selectedImage}
+          handleClose={() => setPicOpen(false)}
+          currentSlide={selectedImage}
         />
       )}
       <div className={styles.main}>

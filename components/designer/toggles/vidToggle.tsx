@@ -20,13 +20,18 @@ const dropIn = {
   },
 };
 
+export type Slide = {
+  image: string;
+  video: string;
+};
+
 type Props = {
   isOpen: boolean;
   handleClose: () => void;
-  currentImage: string;
+  currentSlide: Slide | null;
 };
 
-const vidToggle = ({ handleClose, currentImage }: Props) => {
+const vidToggle = ({ handleClose, currentSlide }: Props) => {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -37,7 +42,8 @@ const vidToggle = ({ handleClose, currentImage }: Props) => {
         animate="visible"
         exit="exit"
       >
-        <Image src={currentImage} className={styles.vidToggle} />
+        <Image src={currentSlide.image} className={styles.vidToggle} />
+        <video autoPlay muted loop controls src={currentSlide.video} className={styles.vidToggle} />
         <button onClick={handleClose}>cross</button>
       </motion.div>
     </Backdrop>
