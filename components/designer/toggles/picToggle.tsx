@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Backdrop from "./backdrop";
 import styles from "./toggles.module.scss";
 import Image from "next/image";
+import { useState } from "react";
 
 const dropIn = {
   hidden: {
@@ -20,28 +21,54 @@ const dropIn = {
   },
 };
 
+export type ImgSlide = {
+  image: string;
+  editedImage: string;
+};
+
 type Props = {
   isOpen: boolean;
   handleClose: () => void;
-  currentImage: string;
+  slide: ImgSlide;
 };
 
-const vidToggle = ({ handleClose, currentImage }: Props) => {
+const PicToggle = ({ handleClose, slide }: Props) => {
+  const [showEditedImage, setToggleNext] = useState(false);
+
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
-        onClick={(e) => e.stopPropagation()}
+        onClick={(event) => {
+          event.stopPropagation();
+          setToggleNext(!showEditedImage);
+        }}
         className={styles.picToggle}
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        <Image src={currentImage} className={styles.picToggle} />
-        <button onClick={handleClose}>cross</button>
+        <Image
+          src={slide.image}
+          className={styles.image}
+          width={1000}
+          height={1500}
+        />
+        <div
+          className={[
+            styles.image,
+            showEditedImage ? styles.hiddenImage : styles.visibleImage,
+          ].join(" ")}
+        >
+          <Image src={slide.editedImage} width={1000} height={1500} />
+        </div>
+        <button className={styles.crossPicButton} onClick={handleClose}>
+          <span />
+          <span />
+        </button>
       </motion.div>
     </Backdrop>
   );
 };
 
-export default vidToggle;
+export default PicToggle;

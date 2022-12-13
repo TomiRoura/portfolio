@@ -4,6 +4,7 @@ $semiwhite: rgb(241, 241, 241);
 .mainFooter {
   background-color: $grey;
   position: relative;
+  z-index: 2;
 }
 
 .gradientWhite {

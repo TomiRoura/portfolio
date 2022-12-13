@@ -1,6 +1,5 @@
 import HoverVideoPlayer from "react-hover-video-player";
 import styles from ".//HoverVideos.module.scss";
-import profilePic from "../../src/profilePic.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -21,18 +20,26 @@ const HoverVideos = () => {
         variants={fadeInUp}
       >
         <div className={styles.profilePic}>
-          <Image width={400} height={400} src={profilePic} />
+          <Image
+            width={500}
+            height={500}
+            src="/home/hoverDiv/ProfilePic.webp"
+          />
         </div>
         <div className={styles.MprofilePic}>
-          <Image width={400} height={400} src={profilePic} />
+          <Image
+            width={500}
+            height={500}
+            src="/home/hoverDiv/ProfilePicMobile.png"
+          />
         </div>
         <div className={styles.HoverVideos}>
           <HoverVideoPlayer
             style={{ width: "50%", height: "50%", left: "0rem" }}
-            videoSrc="/designerVideo.webm"
+            videoSrc="/home/hoverDiv/DesignerSide.webm"
             pausedOverlay={
               <img
-                src="/wallpaperComplete.webp"
+                src="home/hoverDiv/DesignerPicSide.webp"
                 alt=""
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -45,10 +52,10 @@ const HoverVideos = () => {
           />
           <HoverVideoPlayer
             style={{ width: "50%", height: "50%", right: "0rem" }}
-            videoSrc="/coderVideo.webm"
+            videoSrc="home/hoverDiv/CoderSide.webm"
             pausedOverlay={
               <img
-                src="/wallpaperComplete2.webp"
+                src="home/hoverDiv/CoderPicSide.webp"
                 alt=""
                 style={{
                   width: "100%",
@@ -66,8 +73,43 @@ const HoverVideos = () => {
           />
         </div>
         <div className={styles.videos}>
-          <video src={"/designerVideo.webm"} autoPlay loop muted />
-          <video src={"/coderVideo.webm"} autoPlay loop muted />
+          <HoverVideoPlayer
+            style={{ width: "100%", height: "100%", left: "0rem" }}
+            videoSrc="/home/hoverDiv/DesignerSide.webm"
+            pausedOverlay={
+              <img
+                src="home/hoverDiv/DesignerPicSide.webp"
+                alt=""
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            }
+            loadingOverlay={
+              <div className="loading-overlay">
+                <div className="loading-spinner" />
+              </div>
+            }
+          />
+          <HoverVideoPlayer
+            style={{ width: "100%", height: "100%", right: "0rem" }}
+            videoSrc="home/hoverDiv/CoderSide.webm"
+            pausedOverlay={
+              <img
+                src="home/hoverDiv/CoderPicSide.webp"
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  position: "absolute",
+                }}
+              />
+            }
+            loadingOverlay={
+              <div className="loading-overlay">
+                <div className="loading-spinner" />
+              </div>
+            }
+          />
         </div>
         <div className={styles.mainBox}></div>
       </motion.div>

@@ -1,82 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 $grey: rgb(128, 128, 128);
 $darkgrey: rgb(62, 62, 62);
 $semiwhite: rgb(241, 241, 241);
 
 .about {
-
-    position: relative;
-    z-index: 1;
-    background-color: $semiwhite;
-    user-select: none;
+  position: relative;
+  z-index: 1;
+  background-color: $semiwhite;
+  user-select: none;
 }
 
 .aboutTitle {
-    margin: 8% 18% 0%;
-    font-size: 5.8vw;
-    color: $darkgrey;
-
-
+  margin: 8% 18% 0%;
+  font-size: 5.8vw;
+  color: $darkgrey;
 }
 
 .aboutText {
-    margin-left: 30px;
-    text-align: center;
-    font-size: 2.2vw;
-    width: 40%;
-    margin-left: 7%;
-    color: $grey;
+  margin-left: 30px;
+  text-align: center;
+  font-size: 2.2vw;
+  width: 40%;
+  margin-left: 7%;
+  color: $grey;
 }
 
 .aboutSecondText {
-    text-align: center;
-    font-size: 15px;
-    font-size: 1.2vw;
-    width: 50%;
-    margin: 2% 2% 0%;
-    color: black;
+  text-align: center;
+  font-size: 15px;
+  font-size: 1.2vw;
+  width: 50%;
+  margin: 2% 2% 0%;
+  color: black;
 }
 
 .image {
-    float: right;
-    max-width: 30%;
-    margin-top: -30%;
-    position: relative;
+  float: right;
+  max-width: 50%;
+  margin-top: -30%;
+  position: relative;
 }
 
+.mobileImage {
+  display: none;
+  @media (max-width: 700px) {
+    display: flex;
+    float: none;
+    margin: -6rem;
+    margin-top: -10rem;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
 
 @media (max-width: 700px) {
+  .aboutTitle,
+  .aboutText,
+  .aboutSecondText {
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 5%;
+    width: 90%;
+  }
 
+  .aboutTitle {
+    margin-top: 60%;
+    font-size: 3em;
+  }
 
+  .aboutText {
+    font-size: 1em;
+  }
 
-    .aboutTitle,
-    .aboutText,
-    .aboutSecondText {
-        text-align: center;
-        margin-top: 0px;
-        margin-left: 5%;
-        width: 90%;
-    }
+  .aboutSecondText {
+    font-size: 0.8em;
+    margin-bottom: 200px;
+  }
 
-    .aboutTitle {
-        margin-top: 60%;
-        font-size: 3em;
-    }
-
-    .aboutText {
-        font-size: 1em;
-    }
-
-    .aboutSecondText {
-        font-size: 0.8em;
-        margin-bottom: 200px;
-
-    }
-
-    .image {
-        float: none;
-        top: 10vw;
-        margin-left: 35%;
-    }
+  .image {
+    display: none;
+  }
 }

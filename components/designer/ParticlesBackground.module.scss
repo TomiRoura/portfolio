@@ -1,0 +1,30 @@
+$semiwhite: rgb(241, 241, 241);
+
+.white {
+  height: 70vw;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: 0px;
+  @media (max-width: 600px) {
+    height: 140vw;
+  }
+}
+
+.white2 {
+  height: 60vw;
+  width: 100%;
+  position: absolute;
+  background-color: $semiwhite;
+  z-index: 1;
+  top: 100vw;
+  @media (max-width: 1000px) {
+    height: 70vw;
+    top: 100vw;
+  }
+  @media (max-width: 600px) {
+    height: 160vw;
+    top: 250vw;
+  }
+}

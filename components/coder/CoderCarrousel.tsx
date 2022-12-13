@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from ".//CoderCarrousel.module.scss";
-import profilePic from "../../src/profilePic.png";
+import profilePic from "../../src/logo.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

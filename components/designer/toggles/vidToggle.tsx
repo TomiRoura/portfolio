@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Backdrop from "./backdrop";
 import styles from "./toggles.module.scss";
-import Image from "next/image";
 
 const dropIn = {
   hidden: {
@@ -12,11 +11,6 @@ const dropIn = {
     opacity: 1,
     scale: 1,
     transition: { duration: 0.2, ease: "easeOut" },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.5,
-    transition: { duration: 0.1 },
   },
 };
 
@@ -42,16 +36,17 @@ const vidToggle = ({ handleClose, currentSlide }: Props) => {
         animate="visible"
         exit="exit"
       >
-        <Image src={currentSlide.image} className={styles.vidToggle} />
         <video
           autoPlay
-          muted
           loop
           controls
           src={currentSlide.video}
           className={styles.vidToggle}
-        />
-        <button onClick={handleClose}>cross</button>
+        ></video>
+        <button className={styles.crossVidButton} onClick={handleClose}>
+          <span />
+          <span />
+        </button>
       </motion.div>
     </Backdrop>
   );
