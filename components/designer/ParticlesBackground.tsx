@@ -17,10 +17,11 @@ const ParticlesBackground = () => {
     []
   );
   return (
-    <main className={styles.background}>
+    <main>
       <div className={styles.white}></div>
       <div className={styles.white2}></div>
       <Particles
+        className={styles.background}
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}

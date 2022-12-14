@@ -28,3 +28,9 @@ $semiwhite: rgb(241, 241, 241);
     top: 250vw;
   }
 }
+
+.background {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
