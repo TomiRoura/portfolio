@@ -10,6 +10,22 @@ $grey: rgb(239, 239, 239);
   z-index: 2;
   background-color: $grey;
   box-shadow: 0px 0px 5px 2px rgb(126, 126, 126);
+
+  @media (max-width: 600px) {
+    height: 80vw;
+    top: 130vw;
+  }
+
+  @media (max-width: 550px) {
+    height: 80vw;
+    top: 137vw;
+  }
+
+  @media (max-width: 350px) {
+    height: 280px;
+    top: 475px;
+    width: 332px;
+  }
 }
 
 .title {
@@ -37,6 +53,13 @@ $grey: rgb(239, 239, 239);
   margin: 1.3% 2%;
   width: 40vw;
   border-radius: 10px;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+  @media (max-width: 550px) {
+    width: 90%;
+    margin: 4% 4%;
+  }
 }
 
 .image {
@@ -59,6 +82,12 @@ $grey: rgb(239, 239, 239);
     user-select: none;
     text-align: center;
   }
+  @media (max-width: 350px) {
+    font-size: 14px;
+    margin-left: 33px;
+    bottom: 7px;
+    width: 268px;
+  }
 }
 
 .CapitalWord {
@@ -66,28 +95,7 @@ $grey: rgb(239, 239, 239);
 }
 
 @media (max-width: 600px) and (min-width: 550px) {
-  .compareContainer {
-    height: 80vw;
-    top: 130vw;
-  }
-
-  .compareSlider {
-    width: 90%;
-  }
-
   .title {
     display: none;
-  }
-}
-
-@media (max-width: 550px) {
-  .compareContainer {
-    height: 80vw;
-    top: 137vw;
-  }
-
-  .compareSlider {
-    width: 90%;
-    margin: 4% 4%;
   }
 }

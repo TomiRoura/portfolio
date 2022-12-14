@@ -14,8 +14,18 @@
   position: absolute;
 }
 
-.videos {
+.HoverVideosMobile {
   display: none;
+  @media (max-width: 700px) {
+    height: 60vw;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 350px) {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .MprofilePic {
@@ -25,12 +35,6 @@
 @media (max-width: 700px) {
   .HoverVideos {
     display: none;
-  }
-
-  .videos {
-    height: 60vw;
-    display: flex;
-    flex-direction: column;
   }
 
   .profilePic {

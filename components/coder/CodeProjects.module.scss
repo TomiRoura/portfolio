@@ -8,6 +8,14 @@ $grey: rgb(215, 215, 215);
   box-shadow: 0px 0px 5px 2px rgb(148, 148, 148);
   position: relative;
   top: -10rem;
+  @media (max-width: 600px) {
+    top: -5vw;
+    height: 65vw;
+  }
+  @media (max-width: 350px) {
+    top: -18px;
+    height: 227px;
+  }
 }
 
 .title {
@@ -15,10 +23,32 @@ $grey: rgb(215, 215, 215);
   padding-top: 40px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2vw;
+  @media (max-width: 600px) {
+    font-size: 3vw;
+    padding-top: 15px;
+  }
+  @media (max-width: 350px) {
+    font-size: 10.4px;
+    padding-top: 15px;
+  }
 }
 
 .projectsSliderMobile {
   display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    width: 85%;
+    position: absolute;
+    top: 12vw;
+    z-index: 2;
+    right: 7vw;
+  }
+  @media (max-width: 350px) {
+    width: 283px;
+    top: 42px;
+    right: 25px;
+  }
 }
 
 .arrow {
@@ -45,26 +75,7 @@ $grey: rgb(215, 215, 215);
 }
 
 @media (max-width: 600px) {
-  .main {
-    top: -5vw;
-    height: 65vw;
-  }
-
   .projects {
     display: none;
-  }
-
-  .projectsSliderMobile {
-    display: block;
-    width: 90%;
-    position: absolute;
-    top: 12vw;
-    z-index: 2;
-    right: 5vw;
-  }
-
-  .title {
-    font-size: 3vw;
-    padding-top: 15px;
   }
 }

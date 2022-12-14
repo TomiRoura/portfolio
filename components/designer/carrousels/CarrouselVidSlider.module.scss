@@ -9,6 +9,17 @@ $grey: rgb(215, 215, 215);
   position: relative;
   top: -10rem;
   z-index: 2;
+
+  @media (max-width: 600px) {
+    top: -5vw;
+    height: 65vw;
+  }
+
+  @media (max-width: 350px) {
+    top: -17.4px;
+    height: 228px;
+    width: 332px;
+  }
 }
 
 .title {
@@ -18,6 +29,14 @@ $grey: rgb(215, 215, 215);
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: rgb(92, 92, 92);
   font-size: 2vw;
+
+  @media (max-width: 600px) {
+    font-size: 3vw;
+    padding-top: 15px;
+  }
+  @media (max-width: 350px) {
+    font-size: 10.5px;
+  }
 }
 
 .CapitalWord {
@@ -37,14 +56,20 @@ $grey: rgb(215, 215, 215);
   border-radius: 10px;
 }
 
-.playIcon {
-  z-index: 4;
-  margin-left: 50%;
-  position: absolute;
-}
-
 .VidSliderMobile {
   display: none;
+  @media (max-width: 600px) {
+    display: block;
+    width: 80%;
+    position: absolute;
+    top: 16vw;
+    z-index: 2;
+    right: 10vw;
+  }
+  @media (max-width: 350px) {
+    right: 32px;
+    top: 55px;
+  }
 }
 
 .arrow {
@@ -55,26 +80,7 @@ $grey: rgb(215, 215, 215);
 }
 
 @media (max-width: 600px) {
-  .main {
-    top: -5vw;
-    height: 65vw;
-  }
-
   .VidSlider {
     display: none;
-  }
-
-  .VidSliderMobile {
-    display: block;
-    width: 90%;
-    position: absolute;
-    top: 12vw;
-    z-index: 2;
-    right: 5vw;
-  }
-
-  .title {
-    font-size: 3vw;
-    padding-top: 15px;
   }
 }

@@ -7,6 +7,9 @@
   position: relative;
   mask-repeat: repeat;
   background-color: rgb(255, 255, 255);
+  @media (max-width: 350px) {
+    width: 332px;
+  }
 }
 
 .fullStackDev {
@@ -23,6 +26,17 @@
   @media (max-width: 700px) and (min-width: 600px) {
     bottom: 20vw;
   }
+  @media (max-width: 600px) {
+    bottom: 0;
+    padding-top: 0px;
+    font-size: 8vw;
+    right: 1vw;
+  }
+  @media (max-width: 350px) {
+    font-size: 30px;
+    width: 280px;
+    right: 20px;
+  }
 }
 
 .carrouselSlider {
@@ -38,6 +52,18 @@
   @media (max-width: 700px) and (min-width: 600px) {
     margin-top: 16%;
   }
+
+  @media (max-width: 600px) {
+    width: 60%;
+    right: 20%;
+    margin-top: 15%;
+  }
+
+  @media (max-width: 350px) {
+    width: 200px;
+    right: 66px;
+    margin-top: 50px;
+  }
 }
 
 .AppsThatIUse {
@@ -48,6 +74,18 @@
   font-weight: 200;
   user-select: none;
   white-space: nowrap;
+
+  @media (max-width: 600px) {
+    font-size: 6vw;
+    white-space: nowrap;
+    margin-top: 50vw;
+    margin-left: -10px;
+  }
+
+  @media (max-width: 350px) {
+    font-size: 21px;
+    margin-top: 175px;
+  }
 }
 
 .arrow {
@@ -60,25 +98,5 @@
 @media (max-width: 600px) {
   .main {
     height: 700px;
-  }
-
-  .fullStackDev {
-    bottom: 0;
-    padding-top: 0px;
-    font-size: 8vw;
-    right: 1vw;
-  }
-
-  .AppsThatIUse {
-    font-size: 6vw;
-    white-space: nowrap;
-    margin-top: 50vw;
-    margin-left: -10px;
-  }
-
-  .carrouselSlider {
-    width: 60%;
-    right: 20%;
-    margin-top: 15%;
   }
 }

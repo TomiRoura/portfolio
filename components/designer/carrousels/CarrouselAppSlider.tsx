@@ -69,8 +69,8 @@ export default class CarrouselSlider extends Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 2,
+      slidesToShow: 5,
+      slidesToScroll: 5,
       nextArrow: <LeftArrow />,
       prevArrow: <RightArrow />,
     };
@@ -93,7 +93,7 @@ export default class CarrouselSlider extends Component {
               <h2 className={styles.AppsThatIUse}>apps that I use</h2>
               <Slider {...settings}>
                 {images.map((image) => (
-                  <div className={styles.image}>
+                  <div>
                     <Image src={image} width={60} height={60} />
                   </div>
                 ))}
