@@ -18,13 +18,8 @@ $semiwhite: rgb(241, 241, 241);
     z-index: 2;
   }
 
-  @media (max-width: 400px) {
-    height: 70vw;
-    z-index: 2;
-  }
-
   @media (max-width: 350px) {
-    height: 210px;
+    height: 272px;
     z-index: 2;
   }
 }
