@@ -2,20 +2,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from ".//CoderCarrousel.module.scss";
-import profilePic from "../../src/logo.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 function CoderCarrousel() {
   const images = [
-    profilePic,
-    profilePic,
-    profilePic,
-    profilePic,
-    profilePic,
-    profilePic,
-    profilePic,
-    profilePic,
+    "/coder/AppsCarrousel/CSS.webp",
+    "/coder/AppsCarrousel/JavaScript.webp",
+    "/coder/AppsCarrousel/NextJs.webp",
+    "/coder/AppsCarrousel/NodeJs.webp",
+    "/coder/AppsCarrousel/React.webp",
+    "/coder/AppsCarrousel/SCSS.webp",
+    "/coder/AppsCarrousel/Shopify.webp",
+    "/coder/AppsCarrousel/SQL.webp",
+    "/coder/AppsCarrousel/TypeScript.webp",
+    "/coder/AppsCarrousel/WordPress.webp",
   ];
 
   function RightArrow(props) {
@@ -62,8 +63,8 @@ function CoderCarrousel() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <LeftArrow />,
     prevArrow: <RightArrow />,
   };
@@ -85,12 +86,20 @@ function CoderCarrousel() {
             <Slider {...settings}>
               {images.map((images) => (
                 <div className={styles.image}>
-                  <Image src={images} />
+                  <Image src={images} width={50} height={50} priority={true} />
                 </div>
               ))}
             </Slider>
           </motion.div>
         </div>
+        <motion.div variants={fadeInUp} className={styles.backgroundImage}>
+          <Image
+            src="/designer/DesignerMainBackground.png"
+            width={900}
+            height={600}
+            priority={true}
+          />
+        </motion.div>
       </motion.div>
     </main>
   );

@@ -30,7 +30,7 @@ const HoverVideos = () => {
           <Image
             width={500}
             height={500}
-            src="/home/hoverDiv/ProfilePicMobile.png"
+            src="/home/hoverDiv/ProfilePicMobile.webp"
           />
         </div>
         <div className={styles.HoverVideos}>

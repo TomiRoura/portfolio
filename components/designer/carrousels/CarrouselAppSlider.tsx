@@ -7,16 +7,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
-  "/designer/AppsDiv/AdobeAudition.png",
-  "/designer/AppsDiv/AfterEffects.png",
-  "/designer/AppsDiv/Blender.png",
-  "/designer/AppsDiv/Davinci.png",
-  "/designer/AppsDiv/Figma.png",
-  "/designer/AppsDiv/Illustrator.png",
-  "/designer/AppsDiv/Lightroom.png",
-  "/designer/AppsDiv/Photoshop.png",
-  "/designer/AppsDiv/Premiere.png",
-  "/designer/AppsDiv/Procreate.png",
+  "/designer/AppsDiv/AdobeAudition.webp",
+  "/designer/AppsDiv/AfterEffects.webp",
+  "/designer/AppsDiv/Blender.webp",
+  "/designer/AppsDiv/Davinci.webp",
+  "/designer/AppsDiv/Figma.webp",
+  "/designer/AppsDiv/Illustrator.webp",
+  "/designer/AppsDiv/Lightroom.webp",
+  "/designer/AppsDiv/Photoshop.webp",
+  "/designer/AppsDiv/Premiere.webp",
+  "/designer/AppsDiv/Procreate.webp",
 ];
 
 function RightArrow(props) {
@@ -59,8 +59,20 @@ export default class CarrouselSlider extends Component {
     };
 
     const fadeInUp = {
+      initial: { y: 100, opacity: 0 },
+      animate: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.6, ease: easing },
+      },
+    };
+
+    const fadeInUpImage = {
       initial: { opacity: 0 },
-      animate: { opacity: 1, transition: { duration: 3, ease: easing } },
+      animate: {
+        opacity: 1,
+        transition: { duration: 0.5 },
+      },
     };
 
     const stagger = { animate: { transition: { staggerChildren: 0.4 } } };
@@ -93,17 +105,25 @@ export default class CarrouselSlider extends Component {
               <h2 className={styles.AppsThatIUse}>apps that I use</h2>
               <Slider {...settings}>
                 {images.map((image) => (
-                  <div>
-                    <Image src={image} width={60} height={60} />
+                  <div className={styles.image}>
+                    <Image
+                      src={image}
+                      width={60}
+                      height={60}
+                      className={styles.image}
+                    />
                   </div>
                 ))}
               </Slider>
             </motion.div>
           </div>
 
-          <motion.div variants={fadeInUp} className={styles.backgroundImage}>
+          <motion.div
+            variants={fadeInUpImage}
+            className={styles.backgroundImage}
+          >
             <Image
-              src="/designer/DesignerMainBackground-3.png"
+              src="/designer/DesignerMainBackground.webp"
               width={900}
               height={600}
             />

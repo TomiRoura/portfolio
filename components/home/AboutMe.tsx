@@ -1,8 +1,6 @@
 import styles from "./AboutMe.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import aboutPic from "../../src/AboutPic.webp";
-import aboutMPic from "../../src/AboutPicMobile.webp";
 
 const AboutMe = () => {
   const easing = [0, 0.5, 0.91, 0.99];
@@ -35,10 +33,18 @@ const AboutMe = () => {
             frameworks, and libraries based on the client's needs.
           </h1>
           <div className={styles.image}>
-            <Image src={aboutPic} />
+            <Image
+              src="/home/aboutMeDiv/AboutPic.webp"
+              width={1200}
+              height={800}
+            />
           </div>
           <div className={styles.mobileImage}>
-            <Image src={aboutMPic} />
+            <Image
+              src="/home/aboutMeDiv/AboutPicMobile.webp"
+              width={1200}
+              height={800}
+            />
           </div>
         </div>
       </motion.div>

@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import styles from "./CarrouselVidSlider.module.scss";
-import wallpaperComp from "../../../src/wallpaperCarrousel.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import VidToggle, { Slide } from "../toggles/vidToggle";
@@ -32,36 +31,80 @@ function LeftArrow(props: any) {
   );
 }
 
+function MobileSlide(props: { video: string }) {
+  const videoRef = useRef(null);
+  useEffect(() => {
+    let options = {
+      rootMargin: "0px",
+      threshold: [0.25, 0.75],
+    };
+
+    let handlePlay = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          videoRef.current.pause();
+        }
+      });
+    };
+
+    let observer = new IntersectionObserver(handlePlay, options);
+
+    observer.observe(videoRef.current);
+  }, []);
+
+  return (
+    <div className={styles.mobileVideo}>
+      <video
+        ref={videoRef}
+        controls
+        src={props.video}
+        className={styles.mobileVideo}
+      />
+    </div>
+  );
+}
+
 function CarrouselVidSlider() {
+  const videoRefs = useRef<Array<HTMLVideoElement>>([]);
   const [picOpen, setPicOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<Slide>(null);
   const [swipedRecently, setSwipedRecently] = useState(false);
+  console.log({ videoRefs });
 
   const slides: Array<Slide> = [
     {
-      image: wallpaperComp,
+      image: "/designer/VidCarrouselDiv/BoldDrink.png",
       video: "/designer/VidCarrouselDiv/BoldDrink.mp4",
     },
     {
-      image: wallpaperComp,
+      image: "/designer/VidCarrouselDiv/CocktailCommercial.png",
       video: "/designer/VidCarrouselDiv/CocktailCommercial.mp4",
     },
     {
-      image: wallpaperComp,
+      image: "/designer/VidCarrouselDiv/MarcopoloG8.png",
       video: "/designer/VidCarrouselDiv/MarcopoloG8.mp4",
     },
     {
-      image: wallpaperComp,
+      image: "/designer/VidCarrouselDiv/MonsterCommercial.png",
       video: "/designer/VidCarrouselDiv/MonsterCommercial.mp4",
     },
     {
-      image: wallpaperComp,
+      image: "/designer/VidCarrouselDiv/Olipop.png",
       video: "/designer/VidCarrouselDiv/Olipop.mp4",
     },
     {
-      image: wallpaperComp,
+      image: "/designer/VidCarrouselDiv/PicoCommercial.png",
       video: "/designer/VidCarrouselDiv/PicoCommercial.mp4",
     },
+  ];
+
+  const mobileSlides = [
+    "/designer/VidCarrouselDiv/CocktailCommercial.mp4",
+    "/designer/VidCarrouselDiv/BoldDrink.mp4",
+    "/designer/VidCarrouselDiv/MarcopoloG8.mp4",
+    "/designer/VidCarrouselDiv/MonsterCommercial.mp4",
+    "/designer/VidCarrouselDiv/Olipop.mp4",
+    "/designer/VidCarrouselDiv/PicoCommercial.mp4",
   ];
 
   const settings = {
@@ -101,6 +144,13 @@ function CarrouselVidSlider() {
     [swipedRecently, setPicOpen, setSelectedImage, picOpen]
   );
 
+  const onSwipe = () => {
+    videoRefs.current.forEach((video) => {
+      video.pause();
+    });
+    setSwipedRecently(true);
+  };
+
   return (
     <main>
       {picOpen && (
@@ -111,14 +161,25 @@ function CarrouselVidSlider() {
         />
       )}
       <div className={styles.main}>
-        <h2 className={styles.title}>
-          some of my recent
-          <span className={styles.CapitalWord}> video projects </span>{" "}
-        </h2>
-        <div className={styles.VidSlider}>
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ y: 0, opacity: 1 }}
+        >
+          <h2 className={styles.title}>
+            some of my recent
+            <span className={styles.CapitalWord}> video projects </span>{" "}
+          </h2>
+        </motion.div>
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          className={styles.VidSlider}
+        >
           <Slider
             {...settings}
-            onSwipe={() => setSwipedRecently(true)}
+            onSwipe={onSwipe}
             nextArrow={<LeftArrow />}
             prevArrow={<RightArrow />}
           >
@@ -129,20 +190,28 @@ function CarrouselVidSlider() {
                 whileTap={{ scale: 1 }}
                 onClick={() => onClickSlide(slide)}
               >
-                <Image src={slide.image} className={styles.video} />
+                <Image
+                  src={slide.image}
+                  className={styles.video}
+                  width={400}
+                  height={250}
+                />
               </motion.div>
             ))}
           </Slider>
-        </div>
-        <div className={styles.VidSliderMobile}>
-          <Slider {...settingsM} onSwipe={() => setSwipedRecently(true)}>
-            {slides.map((slide) => (
-              <div className={styles.video}>
-                <Image src={slide.image} className={styles.video}></Image>
-              </div>
+        </motion.div>
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          className={styles.VidSliderMobile}
+        >
+          <Slider {...settingsM} onSwipe={onSwipe}>
+            {mobileSlides.map((video) => (
+              <MobileSlide video={video} />
             ))}
           </Slider>
-        </div>
+        </motion.div>
       </div>
     </main>
   );

@@ -8,53 +8,59 @@ import { NextPage } from "next";
 import { motion } from "framer-motion";
 
 const CompareSlider: NextPage = () => {
-  const easing = [0, 0.9, 0.11, 0.99];
-
-  const fadeIn = {
-    initial: { opacity: 0, y: 1000 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easing } },
-  };
-
   return (
     <main>
-      <motion.div
-        exit={{ opacity: 0 }}
-        initial="initial"
-        animate="animate"
-        variants={fadeIn}
-        className={styles.compareContainer}
-      >
-        <h1 className={styles.title}>
+      <div className={styles.compareContainer}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={styles.title}
+        >
           Here's an example of one of my editings, you can see the
           <span className={styles.CapitalWord}> before and after </span> by
           clicking the slider
-        </h1>
-        <h1 className={styles.titleMobile}>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={styles.titleMobile}
+        >
           Here's an example of one of my editings, you can see the
           <span className={styles.CapitalWord}> before and after </span> by
           tapping the slider
-        </h1>
-        <div className={styles.compareSlider}>
+        </motion.div>
+
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          className={styles.compareSlider}
+        >
           <ReactCompareSlider
             itemOne={
               <ReactCompareSliderImage
-                src="/designer/ComparisonDiv/before.png"
-                srcSet="/designer/ComparisonDiv/before.png"
+                src="/designer/ComparisonDiv/before.webp"
+                srcSet="/designer/ComparisonDiv/before.webp"
                 alt="Image one"
                 className={styles.image}
               />
             }
             itemTwo={
               <ReactCompareSliderImage
-                src="/designer/ComparisonDiv/after.png"
-                srcSet="/designer/ComparisonDiv/after.png"
+                src="/designer/ComparisonDiv/after.webp"
+                srcSet="/designer/ComparisonDiv/after.webp"
                 alt="Image two"
                 className={styles.image}
               />
             }
           />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </main>
   );
 };

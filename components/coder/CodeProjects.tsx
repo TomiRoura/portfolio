@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import styles from ".//CodeProjects.module.scss";
-import testing from "../../src/wallpaperCarrousel.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 function CodeProjects() {
-  const images = [testing, testing, testing];
+  const images = [
+    "/coder/myPages/3dNoticias.png",
+    "/coder/myPages/ElPractico.png",
+    "/coder/myPages/GusbertiPropiedades.png",
+  ];
 
   function RightArrow(props) {
     const { className, style, onClick } = props;
@@ -63,7 +66,12 @@ function CodeProjects() {
       <div className={styles.projects}>
         {images.map((images) => (
           <div className={styles.projCard}>
-            <Image src={images} className={styles.projPreview} />
+            <Image
+              src={images}
+              className={styles.projPreview}
+              width={400}
+              height={250}
+            />
           </div>
         ))}
       </div>
@@ -71,7 +79,12 @@ function CodeProjects() {
         <Slider {...settingsM}>
           {images.map((images) => (
             <div className={styles.projPreview}>
-              <Image src={images} className={styles.projPreview} />
+              <Image
+                src={images}
+                className={styles.projPreview}
+                width={400}
+                height={250}
+              />
             </div>
           ))}
         </Slider>

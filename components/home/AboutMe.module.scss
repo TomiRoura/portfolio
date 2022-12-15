@@ -36,21 +36,18 @@ $semiwhite: rgb(241, 241, 241);
 }
 
 .image {
-  float: right;
-  max-width: 50%;
-  margin-top: -30%;
-  position: relative;
+  margin: -31% 52%;
+  right: -52%;
+  position: absolute;
 }
 
 .mobileImage {
   display: none;
   @media (max-width: 700px) {
     display: flex;
-    float: none;
-    margin: -6rem;
-    margin-top: -10rem;
+
+    margin: -20% 10%;
     width: 80%;
-    margin-left: 10%;
   }
 }
 

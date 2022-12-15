@@ -3,8 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./CarrouselPicSlider.module.scss";
-import profilePic from "../../../src/testing.webp";
-import testing3 from "../../../src/testing3.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import PicToggle, { ImgSlide } from "../toggles/picToggle";
@@ -77,28 +75,28 @@ function CarrouselPicSlider() {
 
   const slides: Array<ImgSlide> = [
     {
-      image: "/designer/PicCarrouselDiv/AppleLiquerAfter.png",
-      editedImage: "/designer/PicCarrouselDiv/AppleLiquerBefore.png",
+      image: "/designer/PicCarrouselDiv/AppleLiquerAfter.webp",
+      editedImage: "/designer/PicCarrouselDiv/AppleLiquerBefore.webp",
     },
     {
-      image: "/designer/PicCarrouselDiv/BlondGirlAfter.png",
-      editedImage: "/designer/PicCarrouselDiv/BlondGirlBefore.png",
+      image: "/designer/PicCarrouselDiv/BlondGirlAfter.webp",
+      editedImage: "/designer/PicCarrouselDiv/BlondGirlBefore.webp",
     },
     {
-      image: "/designer/PicCarrouselDiv/RedFishAfter.png",
-      editedImage: "/designer/PicCarrouselDiv/RedFishBefore.png",
+      image: "/designer/PicCarrouselDiv/RedFishAfter.webp",
+      editedImage: "/designer/PicCarrouselDiv/RedFishBefore.webp",
     },
     {
-      image: "/designer/PicCarrouselDiv/ShibuyaAfter.png",
-      editedImage: "/designer/PicCarrouselDiv/ShibuyaBefore.png",
+      image: "/designer/PicCarrouselDiv/ShibuyaAfter.webp",
+      editedImage: "/designer/PicCarrouselDiv/ShibuyaBefore.webp",
     },
     {
-      image: "/designer/PicCarrouselDiv/PurpleGirlAfter.png",
-      editedImage: "/designer/PicCarrouselDiv/PurpleGirlBefore.png",
+      image: "/designer/PicCarrouselDiv/PurpleGirlAfter.webp",
+      editedImage: "/designer/PicCarrouselDiv/PurpleGirlBefore.webp",
     },
     {
-      image: "/designer/PicCarrouselDiv/TiggerRiverAfter.png",
-      editedImage: "/designer/PicCarrouselDiv/TiggerRiverBefore.png",
+      image: "/designer/PicCarrouselDiv/TiggerRiverAfter.webp",
+      editedImage: "/designer/PicCarrouselDiv/TiggerRiverBefore.webp",
     },
   ];
 
