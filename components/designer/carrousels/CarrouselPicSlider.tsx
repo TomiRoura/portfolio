@@ -109,13 +109,26 @@ function CarrouselPicSlider() {
           slide={selectedImage}
         />
       )}
+
       <div className={styles.carrouselSlider}>
-        <h2 className={styles.Title}>
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          className={styles.Title}
+          viewport={{ once: true }}
+        >
           Click on one of my last photography projects to see the
           <span className={styles.CapitalWord}> before and after </span>editing
-        </h2>
+        </motion.div>
 
-        <div className={styles.imageSlider}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className={styles.imageSlider}
+        >
           <Slider {...settings} onSwipe={() => setSwipedRecently(true)}>
             {slides.map((slide) => (
               <motion.div
@@ -133,7 +146,7 @@ function CarrouselPicSlider() {
               </motion.div>
             ))}
           </Slider>
-        </div>
+        </motion.div>
         <div className={styles.imageSliderT}>
           <Slider {...settingsT} onSwipe={() => setSwipedRecently(true)}>
             {slides.map((slide) => (

@@ -165,6 +165,7 @@ function CarrouselVidSlider() {
           initial={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.5 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
         >
           <h2 className={styles.title}>
             some of my recent
@@ -175,6 +176,7 @@ function CarrouselVidSlider() {
           initial={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.5 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           className={styles.VidSlider}
         >
           <Slider
@@ -188,6 +190,7 @@ function CarrouselVidSlider() {
                 className={styles.video}
                 whileHover={{ scale: 0.9 }}
                 whileTap={{ scale: 1 }}
+                viewport={{ once: true }}
                 onClick={() => onClickSlide(slide)}
               >
                 <Image
@@ -204,6 +207,7 @@ function CarrouselVidSlider() {
           initial={{ scale: 0.8, opacity: 0 }}
           transition={{ duration: 0.5 }}
           whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
           className={styles.VidSliderMobile}
         >
           <Slider {...settingsM} onSwipe={onSwipe}>

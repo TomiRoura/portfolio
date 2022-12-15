@@ -50,7 +50,7 @@ export default class CarrouselSlider extends Component {
     const easing = [0, 0.9, 0.11, 0.99];
 
     const fadeInUpTitle = {
-      initial: { y: -800, opacity: 1 },
+      initial: { y: -100, opacity: 0 },
       animate: {
         y: 0,
         opacity: 1,

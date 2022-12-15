@@ -35,7 +35,7 @@ const CompareSlider: NextPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
+          initial={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.5 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
