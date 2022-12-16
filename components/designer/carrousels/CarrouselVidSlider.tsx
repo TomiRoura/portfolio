@@ -74,37 +74,37 @@ function CarrouselVidSlider() {
   const slides: Array<Slide> = [
     {
       image: "/designer/VidCarrouselDiv/BoldDrink.webp",
-      video: "/designer/VidCarrouselDiv/BoldDrink.mp4",
+      video: "/designer/VidCarrouselDiv/BoldDrink.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/CocktailCommercial.webp",
-      video: "/designer/VidCarrouselDiv/CocktailCommercial.mp4",
+      image: "/designer/VidCarrouselDiv/PatronCocktail.webp",
+      video: "/designer/VidCarrouselDiv/PatronCocktail.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/MarcopoloG8.webp",
-      video: "/designer/VidCarrouselDiv/MarcopoloG8.mp4",
+      image: "/designer/VidCarrouselDiv/Barbershop.webp",
+      video: "/designer/VidCarrouselDiv/Barbershop.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/MonsterCommercial.webp",
-      video: "/designer/VidCarrouselDiv/MonsterCommercial.mp4",
+      image: "/designer/VidCarrouselDiv/MonsterCoffee.webp",
+      video: "/designer/VidCarrouselDiv/MonsterCoffee.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/Olipop.webp",
-      video: "/designer/VidCarrouselDiv/Olipop.mp4",
+      image: "/designer/VidCarrouselDiv/OlipopDrink.webp",
+      video: "/designer/VidCarrouselDiv/OlipopDrink.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/PicoCommercial.webp",
-      video: "/designer/VidCarrouselDiv/PicoCommercial.mp4",
+      image: "/designer/VidCarrouselDiv/PicoPizza.webp",
+      video: "/designer/VidCarrouselDiv/PicoPizza.webm",
     },
   ];
 
   const mobileSlides = [
-    "/designer/VidCarrouselDiv/CocktailCommercial.mp4",
-    "/designer/VidCarrouselDiv/BoldDrink.mp4",
-    "/designer/VidCarrouselDiv/MarcopoloG8.mp4",
-    "/designer/VidCarrouselDiv/MonsterCommercial.mp4",
-    "/designer/VidCarrouselDiv/Olipop.mp4",
-    "/designer/VidCarrouselDiv/PicoCommercial.mp4",
+    "/designer/VidCarrouselDiv/BoldDrink.webm",
+    "/designer/VidCarrouselDiv/BarberShop.webm",
+    "/designer/VidCarrouselDiv/CocktailCommercial.webm",
+    "/designer/VidCarrouselDiv/MonsterCoffee.webm",
+    "/designer/VidCarrouselDiv/Olipop.webm",
+    "/designer/VidCarrouselDiv/PicoPizza.webm",
   ];
 
   const settings = {
