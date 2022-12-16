@@ -101,9 +101,9 @@ function CarrouselVidSlider() {
   const mobileSlides = [
     "/designer/VidCarrouselDiv/BoldDrink.webm",
     "/designer/VidCarrouselDiv/BarberShop.webm",
-    "/designer/VidCarrouselDiv/CocktailCommercial.webm",
+    "/designer/VidCarrouselDiv/PatronCocktail.webm",
     "/designer/VidCarrouselDiv/MonsterCoffee.webm",
-    "/designer/VidCarrouselDiv/Olipop.webm",
+    "/designer/VidCarrouselDiv/OlipopDrink.webm",
     "/designer/VidCarrouselDiv/PicoPizza.webm",
   ];
 
