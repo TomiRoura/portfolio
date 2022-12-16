@@ -73,27 +73,27 @@ function CarrouselVidSlider() {
 
   const slides: Array<Slide> = [
     {
-      image: "/designer/VidCarrouselDiv/BoldDrink.png",
+      image: "/designer/VidCarrouselDiv/BoldDrink.webp",
       video: "/designer/VidCarrouselDiv/BoldDrink.mp4",
     },
     {
-      image: "/designer/VidCarrouselDiv/CocktailCommercial.png",
+      image: "/designer/VidCarrouselDiv/CocktailCommercial.webp",
       video: "/designer/VidCarrouselDiv/CocktailCommercial.mp4",
     },
     {
-      image: "/designer/VidCarrouselDiv/MarcopoloG8.png",
+      image: "/designer/VidCarrouselDiv/MarcopoloG8.webp",
       video: "/designer/VidCarrouselDiv/MarcopoloG8.mp4",
     },
     {
-      image: "/designer/VidCarrouselDiv/MonsterCommercial.png",
+      image: "/designer/VidCarrouselDiv/MonsterCommercial.webp",
       video: "/designer/VidCarrouselDiv/MonsterCommercial.mp4",
     },
     {
-      image: "/designer/VidCarrouselDiv/Olipop.png",
+      image: "/designer/VidCarrouselDiv/Olipop.webp",
       video: "/designer/VidCarrouselDiv/Olipop.mp4",
     },
     {
-      image: "/designer/VidCarrouselDiv/PicoCommercial.png",
+      image: "/designer/VidCarrouselDiv/PicoCommercial.webp",
       video: "/designer/VidCarrouselDiv/PicoCommercial.mp4",
     },
   ];
