@@ -19,7 +19,7 @@ $darkgrey: rgb(32, 32, 32);
 .navbarLinks {
   display: flex;
   font-size: 16px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab";
   align-items: center;
   z-index: 2;
   margin-right: 22px;
@@ -119,7 +119,7 @@ $darkgrey: rgb(32, 32, 32);
     background-color: $darkgrey;
     position: fixed;
     align-items: center;
-    font-family: "Roboto Slab", serif;
+    font-family: "Roboto Slab";
     z-index: 100;
     font-weight: 200;
     pointer-events: none;
