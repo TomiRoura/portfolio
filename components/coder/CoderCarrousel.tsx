@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 function CoderCarrousel() {
   const images = [
-    "/coder/AppsCarrousel/Css.webp",
-    "/coder/AppsCarrousel/Javascript.webp",
+    "/coder/AppsCarrousel/CSS.webp",
+    "/coder/AppsCarrousel/JavaScript.webp",
     "/coder/AppsCarrousel/Nextjs.webp",
     "/coder/AppsCarrousel/Nodejs.webp",
     "/coder/AppsCarrousel/React.webp",
@@ -94,7 +94,7 @@ function CoderCarrousel() {
         </div>
         <motion.div variants={fadeInUp} className={styles.backgroundImage}>
           <Image
-            src="/designer/DesignerMainBackground.png"
+            src="/designer/DesignerMainBackground.webp"
             width={900}
             height={600}
             priority={true}
