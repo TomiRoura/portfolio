@@ -9,8 +9,8 @@ function CoderCarrousel() {
   const images = [
     "/coder/AppsCarrousel/CSS.webp",
     "/coder/AppsCarrousel/JavaScript.webp",
-    "/coder/AppsCarrousel/Nextjs.webp",
-    "/coder/AppsCarrousel/Nodejs.webp",
+    "/coder/AppsCarrousel/NextJs.webp",
+    "/coder/AppsCarrousel/NodeJs.webp",
     "/coder/AppsCarrousel/React.webp",
     "/coder/AppsCarrousel/SCSS.webp",
     "/coder/AppsCarrousel/Shopify.webp",
