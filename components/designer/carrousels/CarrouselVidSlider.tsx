@@ -221,6 +221,7 @@ function CarrouselVidSlider() {
                 whileHover={{ scale: 0.9 }}
                 whileTap={{ scale: 1 }}
               >
+                <MobileSlide video={video} />
               </motion.div>
             ))}
           </Slider>
