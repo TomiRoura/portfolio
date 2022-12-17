@@ -202,35 +202,7 @@ function CarrouselVidSlider() {
             ))}
           </Slider>
         </motion.div>
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className={styles.horizontalMobileSlider}
-        >
-          <Slider
-            {...settings}
-            onSwipe={onSwipe}
-            nextArrow={<LeftArrow />}
-            prevArrow={<RightArrow />}
-          >
-            {slides.map((slide) => (
-              <motion.div
-                className={styles.video}
-                whileHover={{ scale: 0.9 }}
-                whileTap={{ scale: 1 }}
-              >
-                <Image
-                  src={slide.image}
-                  className={styles.video}
-                  width={400}
-                  height={250}
-                />
-              </motion.div>
-            ))}
-          </Slider>
-        </motion.div>
+
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           transition={{ duration: 0.5 }}

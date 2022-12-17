@@ -12,9 +12,9 @@
 }
 
 .vidToggle {
-  width: 80%;
+  width: 100vh;
   position: absolute;
-  margin: -15rem;
+  margin: -20%;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -54,8 +54,11 @@
   flex-direction: column;
   cursor: pointer;
   position: absolute;
-  bottom: 13rem;
-  right: 11%;
+  bottom: 14vh;
+  right: 2vh;
+  @media (max-height: 350px) {
+    bottom: 9vh;
+  }
 
   span {
     display: block;
