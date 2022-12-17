@@ -215,13 +215,18 @@ function CarrouselVidSlider() {
             nextArrow={<LeftArrow />}
             prevArrow={<RightArrow />}
           >
-            {mobileSlides.map((video) => (
+            {slides.map((slide) => (
               <motion.div
                 className={styles.video}
                 whileHover={{ scale: 0.9 }}
                 whileTap={{ scale: 1 }}
               >
-                <MobileSlide video={video} />
+                <Image
+                  src={slide.image}
+                  className={styles.video}
+                  width={400}
+                  height={250}
+                />
               </motion.div>
             ))}
           </Slider>
@@ -233,26 +238,9 @@ function CarrouselVidSlider() {
           viewport={{ once: true }}
           className={styles.VidSliderMobile}
         >
-          <Slider
-            {...settingsM}
-            onSwipe={onSwipe}
-            nextArrow={<LeftArrow />}
-            prevArrow={<RightArrow />}
-          >
-            {slides.map((slide) => (
-              <motion.div
-                className={styles.video}
-                whileHover={{ scale: 0.9 }}
-                whileTap={{ scale: 1 }}
-                onClick={() => onClickSlide(slide)}
-              >
-                <Image
-                  src={slide.image}
-                  className={styles.video}
-                  width={400}
-                  height={250}
-                />
-              </motion.div>
+          <Slider {...settingsM} onSwipe={onSwipe}>
+            {mobileSlides.map((video) => (
+              <MobileSlide video={video} />
             ))}
           </Slider>
         </motion.div>
