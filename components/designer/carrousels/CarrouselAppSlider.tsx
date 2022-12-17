@@ -7,16 +7,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
-  "/designer/AppsDiv/adobe_audition.webp",
-  "/designer/AppsDiv/after_effects.webp",
-  "/designer/AppsDiv/blender.webp",
-  "/designer/AppsDiv/davinci.webp",
-  "/designer/AppsDiv/figma.webp",
-  "/designer/AppsDiv/illustrator.webp",
-  "/designer/AppsDiv/lightroom.webp",
-  "/designer/AppsDiv/photoshop.webp",
-  "/designer/AppsDiv/premiere.webp",
-  "/designer/AppsDiv/procreate.webp",
+  "/designer/AppsDiv/adobe_audition_icon.webp",
+  "/designer/AppsDiv/after_effects_icon.webp",
+  "/designer/AppsDiv/blender_icon.webp",
+  "/designer/AppsDiv/davinci_icon.webp",
+  "/designer/AppsDiv/figma_icon.webp",
+  "/designer/AppsDiv/illustrator_icon.webp",
+  "/designer/AppsDiv/lightroom_icon.webp",
+  "/designer/AppsDiv/photoshop_icon.webp",
+  "/designer/AppsDiv/premiere_icon.webp",
+  "/designer/AppsDiv/procreate_icon.webp",
 ];
 
 function RightArrow(props) {
