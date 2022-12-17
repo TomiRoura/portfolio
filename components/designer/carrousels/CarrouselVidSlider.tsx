@@ -73,38 +73,38 @@ function CarrouselVidSlider() {
 
   const slides: Array<Slide> = [
     {
-      image: "/designer/VidCarrouselDiv/BoldDrink.webp",
-      video: "/designer/VidCarrouselDiv/BoldDrink.webm",
+      image: "/designer/VidCarrouselDiv/bold_drink.webp",
+      video: "/designer/VidCarrouselDiv/bold_drink.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/PatronCocktail.webp",
-      video: "/designer/VidCarrouselDiv/PatronCocktail.webm",
+      image: "/designer/VidCarrouselDiv/patron_cocktail.webp",
+      video: "/designer/VidCarrouselDiv/patron_cocktail.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/Barbershop.webp",
-      video: "/designer/VidCarrouselDiv/Barbershop.webm",
+      image: "/designer/VidCarrouselDiv/barber_shop.webp",
+      video: "/designer/VidCarrouselDiv/barber_shop.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/MonsterCoffee.webp",
-      video: "/designer/VidCarrouselDiv/MonsterCoffee.webm",
+      image: "/designer/VidCarrouselDiv/monster_coffee.webp",
+      video: "/designer/VidCarrouselDiv/monster_coffee.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/OlipopDrink.webp",
-      video: "/designer/VidCarrouselDiv/OlipopDrink.webm",
+      image: "/designer/VidCarrouselDiv/olipop_drink.webp",
+      video: "/designer/VidCarrouselDiv/olipop_drink.webm",
     },
     {
-      image: "/designer/VidCarrouselDiv/PicoPizza.webp",
-      video: "/designer/VidCarrouselDiv/PicoPizza.webm",
+      image: "/designer/VidCarrouselDiv/pico_pizza.webp",
+      video: "/designer/VidCarrouselDiv/pico_pizza.webm",
     },
   ];
 
   const mobileSlides = [
-    "/designer/VidCarrouselDiv/BoldDrink.webm",
-    "/designer/VidCarrouselDiv/BarberShop.webm",
-    "/designer/VidCarrouselDiv/PatronCocktail.webm",
-    "/designer/VidCarrouselDiv/MonsterCoffee.webm",
-    "/designer/VidCarrouselDiv/OlipopDrink.webm",
-    "/designer/VidCarrouselDiv/PicoPizza.webm",
+    "/designer/VidCarrouselDiv/bold_drink.webm",
+    "/designer/VidCarrouselDiv/barber_shop.webm",
+    "/designer/VidCarrouselDiv/patron_cocktail.webm",
+    "/designer/VidCarrouselDiv/monster_coffee.webm",
+    "/designer/VidCarrouselDiv/olipop_drink.webm",
+    "/designer/VidCarrouselDiv/pico_pizza.webm",
   ];
 
   const settings = {
@@ -190,7 +190,6 @@ function CarrouselVidSlider() {
                 className={styles.video}
                 whileHover={{ scale: 0.9 }}
                 whileTap={{ scale: 1 }}
-                viewport={{ once: true }}
                 onClick={() => onClickSlide(slide)}
               >
                 <Image

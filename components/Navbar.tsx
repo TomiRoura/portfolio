@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import styles from ".//Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import logo from "../src/logo.webp";
 import { useState } from "react";

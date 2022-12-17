@@ -1,5 +1,5 @@
 import HoverVideoPlayer from "react-hover-video-player";
-import styles from ".//HoverVideos.module.scss";
+import styles from "./HoverVideos.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from ".//CompareSlider.module.scss";
+import styles from "./CompareSlider.module.scss";
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,

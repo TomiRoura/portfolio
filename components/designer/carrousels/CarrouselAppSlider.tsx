@@ -7,16 +7,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
-  "/designer/AppsDiv/AdobeAudition.webp",
-  "/designer/AppsDiv/AfterEffects.webp",
-  "/designer/AppsDiv/Blender.webp",
-  "/designer/AppsDiv/Davinci.webp",
-  "/designer/AppsDiv/Figma.webp",
-  "/designer/AppsDiv/Illustrator.webp",
-  "/designer/AppsDiv/Lightroom.webp",
-  "/designer/AppsDiv/Photoshop.webp",
-  "/designer/AppsDiv/Premiere.webp",
-  "/designer/AppsDiv/Procreate.webp",
+  "/designer/AppsDiv/adobe_audition.webp",
+  "/designer/AppsDiv/after_effects.webp",
+  "/designer/AppsDiv/blender.webp",
+  "/designer/AppsDiv/davinci.webp",
+  "/designer/AppsDiv/figma.webp",
+  "/designer/AppsDiv/illustrator.webp",
+  "/designer/AppsDiv/lightroom.webp",
+  "/designer/AppsDiv/photoshop.webp",
+  "/designer/AppsDiv/premiere.webp",
+  "/designer/AppsDiv/procreate.webp",
 ];
 
 function RightArrow(props) {
@@ -124,7 +124,7 @@ export default class CarrouselSlider extends Component {
             className={styles.backgroundImage}
           >
             <Image
-              src="/designer/DesignerMainBackground.webp"
+              src="/designer/designer_main_background.webp"
               width={900}
               height={600}
               priority={true}
