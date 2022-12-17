@@ -4,7 +4,7 @@ $semiwhite: rgb(241, 241, 241);
   display: none;
 
   @media (max-width: 600px) {
-    display: flex;
+    display: block;
     height: 92vw;
     z-index: 2;
   }

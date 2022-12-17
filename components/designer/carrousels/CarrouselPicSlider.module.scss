@@ -10,6 +10,9 @@ $semiwhite: rgb(241, 241, 241);
   position: absolute;
   margin: -8% 2%;
   z-index: 3;
+  @media (max-width: 1000px) and (min-width: 600px) and (max-height: 600px) {
+    display: none;
+  }
 }
 
 .Title {
@@ -32,6 +35,11 @@ $semiwhite: rgb(241, 241, 241);
   }
   @media (max-width: 900px) {
     margin: -17% 0%;
+  }
+
+  @media (max-width: 1000px) and (min-width: 600px) and (max-height: 600px) {
+    width: 100%;
+    margin: -13% 0%;
   }
 }
 
@@ -77,6 +85,9 @@ $semiwhite: rgb(241, 241, 241);
 
     @media (max-width: 800px) {
       margin: -8% 5%;
+    }
+    @media (max-width: 1000px) and (min-width: 600px) and (max-height: 600px) {
+      display: none;
     }
   }
 }

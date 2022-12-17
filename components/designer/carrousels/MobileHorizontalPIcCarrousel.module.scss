@@ -1,0 +1,24 @@
+$semiwhite: rgb(241, 241, 241);
+
+.imageSliderHorizontalMobile {
+  display: none;
+
+  @media (max-width: 1000px) and (min-width: 600px) and (max-height: 600px) {
+    display: inline;
+    width: 80%;
+    margin: 10% 10%;
+    top: 129vw;
+    z-index: 10;
+    position: absolute;
+    .image {
+      padding-left: 5px;
+      border-radius: 10px;
+    }
+    .arrow {
+      width: 100px;
+      position: relative;
+      margin-top: -20px;
+      background-color: $semiwhite;
+    }
+  }
+}

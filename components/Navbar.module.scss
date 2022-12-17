@@ -24,6 +24,7 @@ $darkgrey: rgb(32, 32, 32);
   z-index: 2;
   margin-right: 22px;
   font-weight: 200;
+  margin-top: 3px;
 
   a {
     margin: 0 10px;
@@ -108,9 +109,11 @@ $darkgrey: rgb(32, 32, 32);
     position: absolute;
     left: 1rem;
   }
+}
 
-  .dropdown {
-    top: 7.3vh;
+.dropdown {
+  @media (max-width: 600px) {
+    top: 60px;
     height: 0px;
     display: flex;
     flex-direction: column;

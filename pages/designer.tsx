@@ -7,6 +7,7 @@ import CarrouselVidSlider from "../components/designer/carrousels/CarrouselVidSl
 import CarrouselPicSlider from "../components/designer/carrousels/CarrouselPicSlider";
 import MobilePicCarrousel from "../components/designer/carrousels/MobilePicCarrousel";
 import ParticlesBackground from "../components/designer/ParticlesBackground";
+import MobileHorizontalPicCarrousel from "../components/designer/carrousels/MobileHorizontalPicCarrousel";
 
 const designer: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const designer: NextPage = () => {
       <CarrouselVidSlider />
       <CarrouselPicSlider />
       <MobilePicCarrousel />
+      <MobileHorizontalPicCarrousel />
       <ParticlesBackground />
       <Footer />
     </main>
