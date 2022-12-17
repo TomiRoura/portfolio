@@ -74,37 +74,37 @@ function CarrouselVidSlider() {
   const slides: Array<Slide> = [
     {
       image: "/designer/VidCarrouselDiv/bold_drink.webp",
-      video: "/designer/VidCarrouselDiv/bold_drink.webm",
+      video: "/designer/VidCarrouselDiv/bold_drink.mp4",
     },
     {
       image: "/designer/VidCarrouselDiv/patron_cocktail.webp",
-      video: "/designer/VidCarrouselDiv/patron_cocktail.webm",
+      video: "/designer/VidCarrouselDiv/patron_cocktail.mp4",
     },
     {
       image: "/designer/VidCarrouselDiv/barber_shop.webp",
-      video: "/designer/VidCarrouselDiv/barber_shop.webm",
+      video: "/designer/VidCarrouselDiv/barber_shop.mp4",
     },
     {
       image: "/designer/VidCarrouselDiv/monster_coffee.webp",
-      video: "/designer/VidCarrouselDiv/monster_coffee.webm",
+      video: "/designer/VidCarrouselDiv/monster_coffee.mp4",
     },
     {
       image: "/designer/VidCarrouselDiv/olipop_drink.webp",
-      video: "/designer/VidCarrouselDiv/olipop_drink.webm",
+      video: "/designer/VidCarrouselDiv/olipop_drink.mp4",
     },
     {
       image: "/designer/VidCarrouselDiv/pico_pizza.webp",
-      video: "/designer/VidCarrouselDiv/pico_pizza.webm",
+      video: "/designer/VidCarrouselDiv/pico_pizza.mp4",
     },
   ];
 
   const mobileSlides = [
-    "/designer/VidCarrouselDiv/bold_drink.webm",
-    "/designer/VidCarrouselDiv/barber_shop.webm",
-    "/designer/VidCarrouselDiv/patron_cocktail.webm",
-    "/designer/VidCarrouselDiv/monster_coffee.webm",
-    "/designer/VidCarrouselDiv/olipop_drink.webm",
-    "/designer/VidCarrouselDiv/pico_pizza.webm",
+    "/designer/VidCarrouselDiv/bold_drink.mp4",
+    "/designer/VidCarrouselDiv/barber_shop.mp4",
+    "/designer/VidCarrouselDiv/patron_cocktail.mp4",
+    "/designer/VidCarrouselDiv/monster_coffee.mp4",
+    "/designer/VidCarrouselDiv/olipop_drink.mp4",
+    "/designer/VidCarrouselDiv/pico_pizza.mp4",
   ];
 
   const settings = {
