@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import ReactHlsPlayer from "react-hls-player";
 import Backdrop from "./backdrop";
 import styles from "./toggles.module.scss";
 
@@ -26,6 +28,7 @@ type Props = {
 };
 
 const vidToggle = ({ handleClose, currentSlide }: Props) => {
+  const videoRef = useRef(null);
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -36,13 +39,14 @@ const vidToggle = ({ handleClose, currentSlide }: Props) => {
         animate="visible"
         exit="exit"
       >
-        <video
+        <ReactHlsPlayer
+          playerRef={videoRef}
           autoPlay
           loop
           controls
           src={currentSlide.video}
           className={styles.vidToggle}
-        ></video>
+        />
         <button className={styles.crossVidButton} onClick={handleClose}>
           <span />
           <span />

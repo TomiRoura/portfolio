@@ -2,8 +2,11 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import styles from "./CarrouselVidSlider.module.scss";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import VidToggle, { Slide } from "../toggles/vidToggle";
+
+const ReactHlsPlayer = dynamic(import("react-hls-player"), { ssr: false });
 
 function RightArrow(props: any) {
   const { className, style, onClick } = props;
@@ -34,6 +37,8 @@ function LeftArrow(props: any) {
 function MobileSlide(props: { video: string }) {
   const videoRef = useRef(null);
   useEffect(() => {
+    if (!videoRef.current) return;
+
     let options = {
       rootMargin: "0px",
       threshold: [0.25, 0.75],
@@ -54,8 +59,8 @@ function MobileSlide(props: { video: string }) {
 
   return (
     <div className={styles.mobileVideo}>
-      <video
-        ref={videoRef}
+      <ReactHlsPlayer
+        playerRef={videoRef}
         controls
         src={props.video}
         className={styles.mobileVideo}
@@ -74,37 +79,37 @@ function CarrouselVidSlider() {
   const slides: Array<Slide> = [
     {
       image: "/designer/VidCarrouselDiv/bold_drink.webp",
-      video: "/designer/VidCarrouselDiv/bold_drink.mp4",
+      video: "/designer/VidCarrouselDiv/bold_drink/index.m3u8",
     },
     {
       image: "/designer/VidCarrouselDiv/patron_cocktail.webp",
-      video: "/designer/VidCarrouselDiv/patron_cocktail.mp4",
+      video: "/designer/VidCarrouselDiv/patron_cocktail/index.m3u8",
     },
     {
       image: "/designer/VidCarrouselDiv/barber_shop.webp",
-      video: "/designer/VidCarrouselDiv/barber_shop.mp4",
+      video: "/designer/VidCarrouselDiv/barber_shop/index.m3u8",
     },
     {
       image: "/designer/VidCarrouselDiv/monster_coffee.webp",
-      video: "/designer/VidCarrouselDiv/monster_coffee.mp4",
+      video: "/designer/VidCarrouselDiv/monster_coffee/index.m3u8",
     },
     {
       image: "/designer/VidCarrouselDiv/olipop_drink.webp",
-      video: "/designer/VidCarrouselDiv/olipop_drink.mp4",
+      video: "/designer/VidCarrouselDiv/olipop_drink/index.m3u8",
     },
     {
       image: "/designer/VidCarrouselDiv/pico_pizza.webp",
-      video: "/designer/VidCarrouselDiv/pico_pizza.mp4",
+      video: "/designer/VidCarrouselDiv/pico_pizza/index.m3u8",
     },
   ];
 
   const mobileSlides = [
-    "/designer/VidCarrouselDiv/bold_drink.mp4",
-    "/designer/VidCarrouselDiv/barber_shop.mp4",
-    "/designer/VidCarrouselDiv/patron_cocktail.mp4",
-    "/designer/VidCarrouselDiv/monster_coffee.mp4",
-    "/designer/VidCarrouselDiv/olipop_drink.mp4",
-    "/designer/VidCarrouselDiv/pico_pizza.mp4",
+    "/designer/VidCarrouselDiv/bold_drink/index.m3u8",
+    "/designer/VidCarrouselDiv/barber_shop/index.m3u8",
+    "/designer/VidCarrouselDiv/patron_cocktail/index.m3u8",
+    "/designer/VidCarrouselDiv/monster_coffee/index.m3u8",
+    "/designer/VidCarrouselDiv/olipop_drink/index.m3u8",
+    "/designer/VidCarrouselDiv/pico_pizza/index.m3u8",
   ];
 
   const settings = {
