@@ -28,7 +28,7 @@ const AboutMe = () => {
           <h1 className={styles.aboutSecondText}>
             {" "}
             I've been learning filmmaking and Photograph manipulation since
-            2008. And I started learning code in 2020. I'm always open to new
+            2008. And I started learning code in 2018. I'm always open to new
             challenges and I'm minded to learning new programs, languages,
             frameworks, and libraries based on the client's needs.
           </h1>
