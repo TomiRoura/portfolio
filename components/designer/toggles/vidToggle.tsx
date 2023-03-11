@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useRef } from "react";
-import ReactHlsPlayer from "react-hls-player";
 import Backdrop from "./backdrop";
 import styles from "./toggles.module.scss";
+
+const ReactHlsPlayer = dynamic(import("react-hls-player"), { ssr: false });
 
 const dropIn = {
   hidden: {

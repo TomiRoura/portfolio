@@ -1,3 +1,3 @@
-const withVideos = require('next-videos')
+module.exports = {
 
-module.exports = withVideos()
+}
