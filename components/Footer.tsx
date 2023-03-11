@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
 import styles from './Footer.module.scss';
 
-const Footer: NextPage = () => {
+const Footer = () => {
   return (
     <main className={styles.mainFooter}>
       <div className={styles.gradientWhite}></div>

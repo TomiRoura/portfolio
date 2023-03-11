@@ -24,6 +24,7 @@ const HoverVideos = () => {
             width={500}
             height={500}
             src="/home/hoverDiv/ProfilePic.webp"
+            priority
           />
         </div>
         <div className={styles.MprofilePic}>
@@ -31,6 +32,7 @@ const HoverVideos = () => {
             width={500}
             height={500}
             src="/home/hoverDiv/ProfilePicMobile.webp"
+            priority
           />
         </div>
         <div className={styles.HoverVideos}>

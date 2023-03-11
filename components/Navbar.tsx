@@ -6,7 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-const Navbar: NextPage = () => {
+const Navbar = () => {
   const [navbarActive, setNavbarActive] = useState(false);
   const onClickMenu = () => setNavbarActive(!navbarActive);
 
