@@ -1,26 +1,18 @@
 import type { NextPage } from "next";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import CarrouselAppSlider from "../components/designer/carrousels/CarrouselAppSlider";
-import CompareSlider from "../components/designer/CompareSlider";
-import CarrouselVidSlider from "../components/designer/carrousels/CarrouselVidSlider";
-import CarrouselPicSlider from "../components/designer/carrousels/CarrouselPicSlider";
-import MobilePicCarrousel from "../components/designer/carrousels/MobilePicCarrousel";
-import ParticlesBackground from "../components/designer/ParticlesBackground";
-import MobileHorizontalPicCarrousel from "../components/designer/carrousels/MobileHorizontalPicCarrousel";
+import dynamic from 'next/dynamic';
+import Spinner from "../components/Spinner";
+
+const DesignerPageContent = dynamic(() => import('../components/DesignerPageContent'), {
+  loading: () => <Spinner />,
+  ssr: false
+})
 
 const designer: NextPage = () => {
   return (
     <main>
       <Navbar />
-      <CarrouselAppSlider />
-      <CompareSlider />
-      <CarrouselVidSlider />
-      <CarrouselPicSlider />
-      <MobilePicCarrousel />
-      <MobileHorizontalPicCarrousel />
-      <ParticlesBackground />
-      <Footer />
+      <DesignerPageContent />
     </main>
   );
 };

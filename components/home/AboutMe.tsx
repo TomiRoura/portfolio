@@ -37,7 +37,7 @@ const AboutMe = () => {
               src="/home/aboutMeDiv/AboutPic.webp"
               width={1200}
               height={800}
-              priority={true}
+              priority
             />
           </div>
           <div className={styles.mobileImage}>
@@ -45,7 +45,7 @@ const AboutMe = () => {
               src="/home/aboutMeDiv/AboutPicMobile.webp"
               width={1200}
               height={800}
-              priority={true}
+              priority
             />
           </div>
         </div>

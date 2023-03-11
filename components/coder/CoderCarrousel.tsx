@@ -102,7 +102,7 @@ function CoderCarrousel() {
             <Slider {...settings}>
               {images.map((images) => (
                 <div className={styles.image}>
-                  <Image src={images} width={50} height={50} priority={true} />
+                  <Image src={images} width={50} height={50} />
                 </div>
               ))}
             </Slider>
@@ -113,7 +113,7 @@ function CoderCarrousel() {
             src="/designer/designer_main_background.webp"
             width={900}
             height={600}
-            priority={true}
+
           />
         </motion.div>
       </motion.div>

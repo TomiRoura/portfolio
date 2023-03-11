@@ -111,7 +111,7 @@ export default class CarrouselSlider extends Component {
                       width={60}
                       height={60}
                       className={styles.image}
-                      priority={true}
+
                     />
                   </div>
                 ))}
@@ -127,7 +127,7 @@ export default class CarrouselSlider extends Component {
               src="/designer/designer_main_background.webp"
               width={900}
               height={600}
-              priority={true}
+
             />
           </motion.div>
         </motion.div>
