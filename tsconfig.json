@@ -22,9 +22,11 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/designer/toggles/testing"  ],
+    "**/*.tsx",
+    "components/designer/toggles/testing"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "public"
   ]
 }
