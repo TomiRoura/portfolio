@@ -7,16 +7,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
-  "/designer/AppsDiv/adobe_audition_icon.webp",
-  "/designer/AppsDiv/after_effects_icon.webp",
-  "/designer/AppsDiv/blender_icon.webp",
-  "/designer/AppsDiv/davinci_icon.webp",
-  "/designer/AppsDiv/figma_icon.webp",
-  "/designer/AppsDiv/illustrator_icon.webp",
-  "/designer/AppsDiv/lightroom_icon.webp",
-  "/designer/AppsDiv/photoshop_icon.webp",
-  "/designer/AppsDiv/premiere_icon.webp",
-  "/designer/AppsDiv/procreate_icon.webp",
+  "/designer/AppsDiv/adobe_audition_circle.webp",
+  "/designer/AppsDiv/after_effects_circle.webp",
+  "/designer/AppsDiv/premiere_circle.webp",
+  "/designer/AppsDiv/photoshop_circle.webp",
+  "/designer/AppsDiv/lightroom_circle.webp",
+  "/designer/AppsDiv/illustrator_circle.webp",
+  "/designer/AppsDiv/blender_circle.webp",
+  "/designer/AppsDiv/davinci_circle.webp",
+  "/designer/AppsDiv/figma_circle.webp",
+  "/designer/AppsDiv/procreate_circle.webp",
 ];
 
 function RightArrow(props) {
@@ -71,9 +71,11 @@ export default class CarrouselSlider extends Component {
       initial: { opacity: 0 },
       animate: {
         opacity: 1,
-        transition: { duration: 0.5 },
+        transition: { duration: 0.2 },
       },
     };
+
+
 
     const stagger = { animate: { transition: { staggerChildren: 0.4 } } };
 
@@ -111,7 +113,7 @@ export default class CarrouselSlider extends Component {
                       width={60}
                       height={60}
                       className={styles.image}
-
+                      priority
                     />
                   </div>
                 ))}
@@ -124,13 +126,23 @@ export default class CarrouselSlider extends Component {
             className={styles.backgroundImage}
           >
             <Image
-              src="/designer/designer_main_background.webp"
-              width={900}
-              height={600}
-
+              src="/designer/imageFront.png"
+              width={300}
+              height={200}
+              priority
             />
           </motion.div>
+          <motion.div
+            variants={fadeInUpImage}
+            className={styles.glass}>
+          </motion.div>
+
         </motion.div>
+        <div className={styles.squareBlue}></div>
+        <div className={styles.squarePurple}></div>
+        <div className={styles.squareGreen}></div>
+        <div className={styles.squareYellow}></div>
+        <div className={styles.squareLightBlue}></div>
       </main>
     );
   }

@@ -104,8 +104,8 @@ function CarrouselVidSlider() {
   ];
 
   const mobileSlides = [
-    "/designer/VidCarrouselDiv/bold_drink/index.m3u8",
     "/designer/VidCarrouselDiv/barber_shop/index.m3u8",
+    "/designer/VidCarrouselDiv/bold_drink/index.m3u8",
     "/designer/VidCarrouselDiv/patron_cocktail/index.m3u8",
     "/designer/VidCarrouselDiv/monster_coffee/index.m3u8",
     "/designer/VidCarrouselDiv/olipop_drink/index.m3u8",
@@ -202,6 +202,7 @@ function CarrouselVidSlider() {
                   className={styles.video}
                   width={400}
                   height={250}
+                  priority
                 />
               </motion.div>
             ))}

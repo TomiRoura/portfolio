@@ -4,13 +4,16 @@ $semiwhite: rgb(241, 241, 241);
   height: 70vw;
   width: 100%;
   position: absolute;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.318);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 46%, rgba(233, 233, 233, 1) 79%, rgba(215, 215, 215, 1) 100%);
   z-index: 1;
   top: 0px;
+
   @media (max-width: 600px) {
     height: 140vw;
     width: 100%;
   }
+
   @media (max-width: 350px) {
     height: 500px;
     width: 332px;
@@ -24,14 +27,17 @@ $semiwhite: rgb(241, 241, 241);
   background-color: $semiwhite;
   z-index: 1;
   top: 100vw;
+
   @media (max-width: 1000px) {
     height: 70vw;
     top: 100vw;
   }
+
   @media (max-width: 600px) {
     height: 160vw;
     top: 250vw;
   }
+
   @media (max-width: 350px) {
     height: 300px;
     top: 1000px;
@@ -40,6 +46,5 @@ $semiwhite: rgb(241, 241, 241);
 }
 
 .background {
-  @media (max-width: 600px) {
-  }
+  @media (max-width: 600px) {}
 }
