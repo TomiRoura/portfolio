@@ -35,83 +35,41 @@ const HoverVideos = () => {
             priority
           />
         </div>
-        <div className={styles.HoverVideos}>
-          <HoverVideoPlayer
-            style={{ width: "50%", height: "50%", left: "0rem" }}
-            videoSrc="/home/hoverDiv/DesignerSide.webm"
-            pausedOverlay={
-              <img
-                src="home/hoverDiv/DesignerPicSide.webp"
-                alt=""
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            }
-            loadingOverlay={
-              <div className="loading-overlay">
-                <div className="loading-spinner" />
-              </div>
-            }
-          />
-          <HoverVideoPlayer
-            style={{ width: "50%", height: "50%", right: "0rem" }}
-            videoSrc="home/hoverDiv/CoderSide.webm"
-            pausedOverlay={
-              <img
-                src="home/hoverDiv/CoderPicSide.webp"
-                alt=""
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  position: "absolute",
-                }}
-              />
-            }
-            loadingOverlay={
-              <div className="loading-overlay">
-                <div className="loading-spinner" />
-              </div>
-            }
-          />
+        <div className={styles.HoverPics}>
+          <Image src="/home/hoverDiv/DesignerPicSide.webp"
+            width={713}
+            height={401}
+            priority
+            className={styles.HoverDesignerPicture}>
+          </Image>
+          <Image src="/home/hoverDiv/CoderPicSide.webp"
+            width={713}
+            height={401}
+            priority
+            className={styles.HoverCoderPicture}>
+          </Image>
         </div>
-        <div className={styles.HoverVideosMobile}>
-          <HoverVideoPlayer
-            style={{ width: "100%", height: "100%", left: "0rem" }}
-            videoSrc="/home/hoverDiv/DesignerSide.webm"
-            pausedOverlay={
-              <img
-                src="home/hoverDiv/DesignerPicSide.webp"
-                alt=""
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            }
-            loadingOverlay={
-              <div className="loading-overlay">
-                <div className="loading-spinner" />
-              </div>
-            }
-          />
-          <HoverVideoPlayer
-            style={{ width: "100%", height: "100%", right: "0rem" }}
-            videoSrc="home/hoverDiv/CoderSide.webm"
-            pausedOverlay={
-              <img
-                src="home/hoverDiv/CoderPicSide.webp"
-                alt=""
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  position: "absolute",
-                }}
-              />
-            }
-            loadingOverlay={
-              <div className="loading-overlay">
-                <div className="loading-spinner" />
-              </div>
-            }
-          />
+        <div className={styles.HoverVideos}>
+          <video loop autoPlay muted src="/home/hoverDiv/DesignerSide.webm" className={styles.HoverVideoDesigner}></video>
+          <video loop autoPlay muted src="/home/hoverDiv/CoderSide.webm" className={styles.HoverVideoCoder} ></video>
+        </div>
+        <div className={styles.HoverPicsM}>
+          <Image src="/home/hoverDiv/DesignerPicSide.webp"
+            width={713}
+            height={401}
+            priority
+          >
+          </Image>
+          <Image src="/home/hoverDiv/CoderPicSide.webp"
+            width={713}
+            height={401}
+            priority
+          >
+          </Image>
+        </div>
+        <div className={styles.HoverVideosM}>
+          <video loop autoPlay muted src="/home/hoverDiv/DesignerSide.webm" className={styles.HVideoDesignerM}></video>
+          <video loop autoPlay muted src="/home/hoverDiv/CoderSide.webm" className={styles.HVideoCoderM} ></video>
         </div>
         <div className={styles.mainBox}></div>
       </motion.div>

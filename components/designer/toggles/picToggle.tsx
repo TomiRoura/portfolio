@@ -53,6 +53,7 @@ const PicToggle = ({ handleClose, slide }: Props) => {
           className={styles.image}
           width={400}
           height={600}
+          priority
         />
         <div
           className={[
@@ -60,7 +61,7 @@ const PicToggle = ({ handleClose, slide }: Props) => {
             showEditedImage ? styles.hiddenImage : styles.visibleImage,
           ].join(" ")}
         >
-          <Image src={slide.editedImage} width={400} height={600} />
+          <Image src={slide.editedImage} width={400} height={600} priority />
         </div>
         <button className={styles.crossPicButton} onClick={handleClose}>
           <span />
