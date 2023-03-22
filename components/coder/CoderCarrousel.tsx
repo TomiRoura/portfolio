@@ -110,13 +110,23 @@ function CoderCarrousel() {
         </div>
         <motion.div variants={fadeInUpImage} className={styles.backgroundImage} >
           <Image
-            src="/designer/designer_main_background.webp"
-            width={900}
-            height={600}
+            src="/coder/coderLogo.png"
+            width={300}
+            height={300}
 
           />
         </motion.div>
-      </motion.div>
+      <motion.div
+            variants={fadeInUpImage}
+            className={styles.glass}>
+          </motion.div>
+
+        </motion.div>
+        <div className={styles.squareBlue}></div>
+        <div className={styles.squarePurple}></div>
+        <div className={styles.squareGreen}></div>
+        <div className={styles.squareYellow}></div>
+        <div className={styles.squareLightBlue}></div>
     </main>
   );
 }

@@ -1,4 +1,3 @@
-import HoverVideoPlayer from "react-hover-video-player";
 import styles from "./HoverVideos.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -50,8 +49,8 @@ const HoverVideos = () => {
           </Image>
         </div>
         <div className={styles.HoverVideos}>
-          <video loop autoPlay muted src="/home/hoverDiv/DesignerSide.webm" className={styles.HoverVideoDesigner}></video>
-          <video loop autoPlay muted src="/home/hoverDiv/CoderSide.webm" className={styles.HoverVideoCoder} ></video>
+          <video loop autoPlay muted src="/home/hoverDiv/DesignerSide.mp4" className={styles.HoverVideoDesigner}></video>
+          <video loop autoPlay muted src="/home/hoverDiv/CoderSide.mp4" className={styles.HoverVideoCoder} ></video>
         </div>
         <div className={styles.HoverPicsM}>
           <Image src="/home/hoverDiv/DesignerPicSide.webp"
@@ -68,8 +67,8 @@ const HoverVideos = () => {
           </Image>
         </div>
         <div className={styles.HoverVideosM}>
-          <video loop autoPlay muted src="/home/hoverDiv/DesignerSide.webm" className={styles.HVideoDesignerM}></video>
-          <video loop autoPlay muted src="/home/hoverDiv/CoderSide.webm" className={styles.HVideoCoderM} ></video>
+          <video loop autoPlay muted src="/home/hoverDiv/DesignerSide.mp4" className={styles.HVideoDesignerM}></video>
+          <video loop autoPlay muted src="/home/hoverDiv/CoderSide.mp4" className={styles.HVideoCoderM} ></video>
         </div>
         <div className={styles.mainBox}></div>
       </motion.div>

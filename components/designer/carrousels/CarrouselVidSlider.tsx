@@ -6,7 +6,8 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import VidToggle, { Slide } from "../toggles/vidToggle";
 
-const ReactHlsPlayer = dynamic(import("react-hls-player"), { ssr: false });
+const ReactHlsPlayer = dynamic(import("react-hls-player"), { ssr: false}  ) ;
+
 
 function RightArrow(props: any) {
   const { className, style, onClick } = props;
@@ -59,11 +60,12 @@ function MobileSlide(props: { video: string }) {
 
   return (
     <div className={styles.mobileVideo}>
-      <ReactHlsPlayer
+      <ReactHlsPlayer 
         playerRef={videoRef}
         controls
         src={props.video}
         className={styles.mobileVideo}
+        preload="false"
       />
     </div>
   );

@@ -48,6 +48,7 @@ const vidToggle = ({ handleClose, currentSlide }: Props) => {
           controls
           src={currentSlide.video}
           className={styles.vidToggle}
+          preload="false"
         />
         <button className={styles.crossVidButton} onClick={handleClose}>
           <span />
