@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 function CoderCarrousel() {
   const images = [
     "/coder/AppsCarrousel/css_logo.webp",
-    "/coder/AppsCarrousel/javascript_logo.webp",
+    "/coder/AppsCarrousel/js_logo.webp",
     "/coder/AppsCarrousel/nextjs_logo.webp",
     "/coder/AppsCarrousel/nodejs_logo.webp",
     "/coder/AppsCarrousel/react_logo.webp",

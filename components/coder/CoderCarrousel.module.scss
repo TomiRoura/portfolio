@@ -151,10 +151,10 @@
   animation: animate 10s linear infinite;
 
   @media (max-width: 600px) {
-    top: 6%;
+    top: 11%;
     right: 1%;
-    height: 10rem;
-    width: 7.5rem;
+    height: 6rem;
+    width: 6rem;
   }
 }
 
@@ -201,7 +201,7 @@
   animation: animate2 10s linear infinite;
 
   @media (max-width: 600px) {
-    top: 40%;
+    top: 60%;
     right: 30%;
     height: 10rem;
     width: 10rem;
@@ -227,10 +227,10 @@
   animation: animate2 10s linear infinite;
 
   @media (max-width: 600px) {
-    top: 30%;
-    right: 20%;
-    height: 8rem;
-    width: 8rem;
+    top: 50%;
+    left: 60%;
+    height: 6rem;
+    width: 6rem;
   }
 }
 

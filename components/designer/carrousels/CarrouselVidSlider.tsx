@@ -204,7 +204,6 @@ function CarrouselVidSlider() {
                   className={styles.video}
                   width={400}
                   height={250}
-                  priority
                 />
               </motion.div>
             ))}

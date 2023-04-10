@@ -59,7 +59,6 @@ function CarouselSlide(props: CarouselSlideProps) {
           blurDataURL="/designer/PicCarrouselDiv/AppleLiquerAfter.png"
           width={1000}
           height={1500}
-          priority
         />
       </div>
     </div>

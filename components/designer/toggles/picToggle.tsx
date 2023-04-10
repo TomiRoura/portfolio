@@ -53,7 +53,6 @@ const PicToggle = ({ handleClose, slide }: Props) => {
           className={styles.image}
           width={400}
           height={600}
-          priority
         />
         <div
           className={[

@@ -142,7 +142,6 @@ function CarrouselPicSlider() {
                   className={styles.image}
                   width={1000}
                   height={1500}
-                  priority
                 />
               </motion.div>
             ))}
@@ -162,7 +161,6 @@ function CarrouselPicSlider() {
                   className={styles.image}
                   width={1000}
                   height={1500}
-                  priority
                 />
               </motion.div>
             ))}
