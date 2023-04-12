@@ -1,6 +1,8 @@
 import styles from "./HoverVideos.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import DesignerPicSide from '../../src/DesignerPicSide.webp'
+import CoderPicSide from '../../src/CoderPicSide.webp'
 
 const easing = [0, 0.9, 0.11, 0.99];
 
@@ -35,15 +37,11 @@ const HoverVideos = () => {
           />
         </div>
         <div className={styles.HoverPics}>
-          <Image src="/home/hoverDiv/DesignerPicSide.webp"
-            width={730}
-            height={411}
+          <Image src={DesignerPicSide}
             priority
             className={styles.HoverDesignerPicture}>
           </Image>
-          <Image src="/home/hoverDiv/CoderPicSide.webp"
-            width={730}
-            height={411}
+          <Image src={CoderPicSide} 
             priority
             className={styles.HoverCoderPicture}>
           </Image>
