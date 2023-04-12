@@ -36,14 +36,14 @@ const HoverVideos = () => {
         </div>
         <div className={styles.HoverPics}>
           <Image src="/home/hoverDiv/DesignerPicSide.webp"
-            width={713}
-            height={401}
+            width={730}
+            height={411}
             priority
             className={styles.HoverDesignerPicture}>
           </Image>
           <Image src="/home/hoverDiv/CoderPicSide.webp"
-            width={713}
-            height={401}
+            width={730}
+            height={411}
             priority
             className={styles.HoverCoderPicture}>
           </Image>
